@@ -1,8 +1,8 @@
-import './App.css'
 import React, { useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import '../App.css'
+import logo from  '../images/logo.jpg'
 
 function Cadastro(){
     const navigate = useNavigate()
@@ -35,33 +35,42 @@ function Cadastro(){
   };
 
   return (
-    <div>
-     
-      <h1>Casdastro de Usuarios</h1>
-  
-     
+    <>
+    <div className='img-logo'>
+      <img src={logo}></img>
+    </div>
+    <div div className='casdastro-container'>
+      <div className='tCadastro'>
+        <h1>Cadastrar Usuário</h1>
+      </div>
       <form onSubmit={handleSubmit}>
-       
-        <input
-          type="text"
-          name="username"
-          placeholder="Usuario"
-          value={novoUsuario.username}
-          onChange={handleInputChange}
-        />
-       
-        <input
-          type="text"
-          name="password"
-          placeholder="Password"
-          value={novoUsuario.password}
-          onChange={handleInputChange}
-        />
-       
-        <button type="submit">Cadastrar Usuario</button>
+       <div>
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="Email"
+              value={novoUsuario.username}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+              <input
+              type="text"
+              name="password"
+              placeholder="Senha"
+              value={novoUsuario.password}
+              onChange={handleInputChange}
+              />
+          </div>
+
+       </div>
+        <button type="submit">Cadastrar</button>
+        <a className='link-login'>Possui Cadastro? Logar</a>
       </form>
     </div>
+    </>
     );
   }
 
-export  {Cadastro};
+export default Cadastro;
