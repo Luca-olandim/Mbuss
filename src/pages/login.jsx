@@ -1,6 +1,8 @@
 import React, { useState} from 'react';
 import axios from 'axios';
+import '../App.css'
 import { useNavigate } from 'react-router-dom';
+import logo from  '../images/logo.jpg'
 
 const logar = async (username, password) => {
   try {
@@ -33,8 +35,14 @@ function Login() {
   };
   
   return (
-    <div>
-      <h1>Login SyStem</h1>
+    <>
+    <div className='img-logo'>
+      <img src={logo}></img>
+    </div>
+    <div className='login-container'>
+    <div className='tCadastro'>
+        <h1>Login</h1>
+      </div>
       <form>
         <label>
           Usuário:
@@ -53,13 +61,13 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <br />
-        <button type="button" onClick={handleLogin}>
+        <button type="submit" onClick={handleLogin}>
           Login
         </button>
       </form>
       <a href='/cadastro'>Náo possui conta? Cadastre-se</a>
     </div>
+    </>
   );
 
 }

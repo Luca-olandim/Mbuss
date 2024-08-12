@@ -56,17 +56,23 @@ function Cadastro(){
           </div>
           <div>
               <input
-              type="text"
+              type="password"
               name="password"
               placeholder="Senha"
               value={novoUsuario.password}
               onChange={handleInputChange}
               />
           </div>
-
+          <div>
+            <input
+            type="password"
+            name="password2"
+            placeholder="Confirmar senha">
+            </input>
+          </div>
        </div>
         <button type="submit">Cadastrar</button>
-        <a className='link-login'>Possui Cadastro? Logar</a>
+        <a href='/login' className='link-login' >Possui Cadastro? Logar</a>
       </form>
     </div>
     </>
