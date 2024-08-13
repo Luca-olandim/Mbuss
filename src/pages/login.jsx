@@ -45,8 +45,8 @@ function Login() {
       </div>
       <form>
         <label>
-          Usuário:
           <input
+          placeholder='Usuário'
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -54,14 +54,14 @@ function Login() {
         </label>
         <br />
         <label>
-          Senha:
           <input
+          placeholder='Senha'
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button type="submit" onClick={handleLogin}>
+        <button className="botao-login" type="submit" onClick={handleLogin}>
           Login
         </button>
       </form>
@@ -69,7 +69,6 @@ function Login() {
     </div>
     </>
   );
-
 }
 
 export default Login;

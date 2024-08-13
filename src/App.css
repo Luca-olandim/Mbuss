@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Archivo+Black&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BioRhyme:wght@200..800&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
 .casdastro-container {
     width: 400px;
     margin: 0 auto;
@@ -7,6 +8,10 @@
     font-family: Arial, sans-serif;
     margin-top: 3vh;
     margin-bottom: 10vh;
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   }
 
   .login-container {
@@ -23,8 +28,10 @@
   
   .tCadastro h1 {
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
     margin-bottom: 30px;
   }
   
@@ -39,8 +46,11 @@
     margin: 10px 0;
     border-radius: 20px;
     border: 1px solid #ccc;
-    font-size: 16px;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
   } 
   
   input::placeholder {
@@ -50,15 +60,17 @@
   button[type="submit"] {
     width: 100%;
     padding: 12px;
-    margin-top: 5px;
+    margin-top: 1vh;
     background-color: #000000;
     color: #fff;
-    font-size: 18px;
-    font-weight: bold;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
   }
   
   button[type="submit"]:hover {
@@ -91,5 +103,38 @@
   .img-logo{
     text-align: center;
   }
+
+  .form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+
+  .input-search{
+    width: 200%;
+    margin-top: 8vh;
+    margin-left: 5vh;
+
+  }
   
-  
+  .img-logo-home{
+    margin-left: 26vw;
+    
+  }
+  .navbar{
+    display: flex;
+    flex-direction: row;
+  }
+  .input-icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: 27vw;
+    margin-top: 8vh;
+  }
+  .favoritos{
+    margin-right: 1vw;
+  }
+  .carrinho{
+    margin-right: 1vw;
+  }
