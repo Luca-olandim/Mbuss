@@ -1,46 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Archivo+Black&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BioRhyme:wght@200..800&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
-.casdastro-container {
-    width: 400px;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    margin-top: 3vh;
-    margin-bottom: 10vh;
-    font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Archivo+Black&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BioRhyme:wght@200..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
 
-  .login-container {
-    width: 400px;
+.casdastro-container,
+.login-container {
+    width: 90%;
+    max-width: 400px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     margin-top: 3vh;
     margin-bottom: 10vh;
-  }
-  
-  
-  .tCadastro h1 {
+}
+
+.tCadastro h1 {
     text-align: center;
     font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     margin-bottom: 30px;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  input{
+}
+
+input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -51,13 +42,13 @@
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  } 
-  
-  input::placeholder {
+}
+
+input::placeholder {
     color: #888;
-  }
-  
-  button[type="submit"] {
+}
+
+button[type="submit"] {
     width: 100%;
     padding: 12px;
     margin-top: 1vh;
@@ -71,70 +62,168 @@
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }
-  
-  button[type="submit"]:hover {
+}
+
+button[type="submit"]:hover {
     background-color: #333;
-  }
-  
-  form div {
+}
+
+form div {
     position: relative;
-  }
-  
-  form div:last-of-type {
+}
+
+form div:last-of-type {
     margin-bottom: 20px;
-  }
-  
-  a {
+}
+
+a {
     display: block;
     text-align: center;
     margin-top: 10px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  .link-login{
-    margin-top: 20px;
-  }
-  .img-logo{
-    text-align: center;
-  }
+}
 
-  .form button {
+a:hover {
+    text-decoration: underline;
+}
+
+.link-login {
+    margin-top: 20px;
+}
+
+.img-logo {
+    text-align: center;
+}
+
+.form button {
     border: none;
     background: none;
     color: #8b8ba7;
-  }
+}
 
-  .input-search{
-    width: 200%;
+.input-search {
+    width: 100%;
+    max-width: 400px;
     margin-top: 8vh;
-    margin-left: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  }
-  
-  .img-logo-home{
-    margin-left: 26vw;
-    
-  }
-  .navbar{
+.img-logo-home {
+    margin: 0 auto;
+}
+
+.navbar {
     display: flex;
     flex-direction: row;
-  }
-  .input-icones{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-icones {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    margin-left: 27vw;
-    margin-top: 8vh;
-  }
-  .favoritos{
+    align-items: center;
+}
+
+.favoritos,
+.carrinho {
     margin-right: 1vw;
-  }
-  .carrinho{
-    margin-right: 1vw;
-  }
+}
+
+.catalogo {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    padding: 10px 0;
+    margin-top: 11%;
+    font-family: "Josefin Sans", sans-serif;
+    left: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    .casdastro-container,
+    .login-container {
+        padding: 15px;
+    }
+
+    .tCadastro h1 {
+        font-size: 24px;
+    }
+
+    .input-search {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .img-logo-home {
+        margin: 0 auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-icones {
+        justify-content: flex-start;
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+    .catalogo {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .casdastro-container,
+    .login-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tCadastro h1 {
+        font-size: 20px;
+    }
+
+    .input-search {
+        width: 100%;
+        margin-top: 5vh;
+        margin-left: 0;
+    }
+
+    .img-logo-home {
+        margin: 0 auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-icones {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+    .catalogo {
+      width: 100%;
+      text-align: center;
+      background-color: black;
+      padding: 10px 0;
+      margin: 0; /* Remove espaçamentos extras */
+      font-family: "Josefin Sans", sans-serif;
+      position: relative; /* Ajusta a posição relativa para melhor alinhamento */
+      top: 0; /* Alinha com o topo do contêiner pai */
+    }
+}
+
+  

@@ -13,7 +13,7 @@ return(
             <input className="input-search" placeholder="Pesquisar para..." required="" type="text"/>
         </form>
         <div className='img-logo-home'>
-            <a href=''><img src={logo} style={{ width: '250px', height: 'auto' }}></img></a>
+            <a href='/'><img src={logo} style={{ width: '250px', height: 'auto' }}></img></a>
         </div>
         <div className='input-icones'>
             <div className='favoritos'>
@@ -26,6 +26,9 @@ return(
             <svg xmlns="http://www.w3.org/2000/svg" id="user" data-name="Layer 1" viewBox="0 0 24 24" width="30" height="30"><path d="M16.043,14H7.957A4.963,4.963,0,0,0,3,18.957V24H21V18.957A4.963,4.963,0,0,0,16.043,14Z"/><circle cx="12" cy="6" r="6"/></svg>
             </div>
         </div>
+        <div className='catalogo'>
+        <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold' }}>Catálogo</a>
+    </div>
     </div>
     </>
     );
