@@ -37,7 +37,7 @@ function Cadastro(){
   return (
     <>
     <div className='img-logo'>
-      <img src={logo}></img>
+      <img src={logo} style={{ width: '250px', height: 'auto' }}></img>
     </div>
     <div div className='casdastro-container'>
       <div className='tCadastro'>

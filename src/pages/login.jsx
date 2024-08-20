@@ -32,12 +32,14 @@ function Login() {
       } catch (error) {
         console.error('Erro ao se logar:', error);
       }
+
+
   };
   
   return (
     <>
     <div className='img-logo'>
-      <img src={logo}></img>
+      <img src={logo} style={{ width: '250px', height: 'auto' }}></img>
     </div>
     <div className='login-container'>
     <div className='tCadastro'>
@@ -65,7 +67,7 @@ function Login() {
           Login
         </button>
       </form>
-      <a href='/cadastro'>Náo possui conta? Cadastre-se</a>
+      <a href='/cadastro'>Não possui conta? Cadastre-se</a>
     </div>
     </>
   );
