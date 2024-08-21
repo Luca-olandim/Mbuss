@@ -36,12 +36,12 @@ function Cadastro(){
 
   return (
     <>
-    <div className='img-logo'>
-      <img src={logo} style={{ width: '250px', height: 'auto' }}></img>
+    <div className='img-logo pt-2'>
+      <img src={logo} className='w-[250px] h-auto m-auto'></img>
     </div>
     <div div className='casdastro-container'>
-      <div className='tCadastro'>
-        <h1>Cadastrar Usuário</h1>
+      <div className='tCadastro '>
+        <h1 className='text-2xl mb-2'>Cadastrar Usuário</h1>
       </div>
       <form onSubmit={handleSubmit}>
        <div>
@@ -52,6 +52,7 @@ function Cadastro(){
               placeholder="Email"
               value={novoUsuario.username}
               onChange={handleInputChange}
+              className='input-form rounded-[20px]'
             />
           </div>
           <div>
@@ -61,13 +62,16 @@ function Cadastro(){
               placeholder="Senha"
               value={novoUsuario.password}
               onChange={handleInputChange}
+              className='input-form rounded-[20px]'
               />
           </div>
           <div>
             <input
             type="password"
             name="password2"
-            placeholder="Confirmar senha">
+            placeholder="Confirmar senha"
+            className='input-form rounded-[20px]'>
+              
             </input>
           </div>
        </div>

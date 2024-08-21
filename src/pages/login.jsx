@@ -38,12 +38,12 @@ function Login() {
   
   return (
     <>
-    <div className='img-logo'>
-      <img src={logo} style={{ width: '250px', height: 'auto' }}></img>
+    <div className='img-logo pt-2'>
+      <img src={logo} className='w-[250px] h-auto m-auto'></img>
     </div>
     <div className='login-container'>
     <div className='tCadastro'>
-        <h1>Login</h1>
+        <h1 className='text-2xl mb-2'>Login</h1>
       </div>
       <form>
         <label>
@@ -52,6 +52,7 @@ function Login() {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            className='input-form rounded-[20px] mb-0'
           />
         </label>
         <br />
@@ -61,6 +62,7 @@ function Login() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className='input-form rounded-[20px] mt-1 mb-5'
           />
         </label>
         <button className="botao-login" type="submit" onClick={handleLogin}>
