@@ -75,7 +75,7 @@ function Cadastro(){
             </input>
           </div>
        </div>
-        <button type="submit">Cadastrar</button>
+        <button className="botao-login">Cadastrar</button>
         <a href='/login' className='link-login' >Possui Cadastro? Logar</a>
       </form>
     </div>

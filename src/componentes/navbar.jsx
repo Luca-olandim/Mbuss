@@ -10,7 +10,7 @@ function Navbar() {
 
     return (
         <>
-            <div className='navbar'>
+            <div className='navbar '>
                 <form className="form">
                     <label className='w-[310px] border-none bg-[#c1c7cd] rounded-[20px]  flex items-center justify-between pr-[10px]'>
                     <input className="border-none w-full bg-[#c1c7cd] rounded-[20px] focus:outline-none focus:ring-0 placeholder:text-gray-500" placeholder="Pesquisar para..." required="" type="text" />
@@ -33,9 +33,8 @@ function Navbar() {
                 </div>
             </div>
             <div className='catalogo'>
-                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold' }}>Catálogo</a>
+                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
-            
     </>
     );
 }

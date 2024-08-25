@@ -59,7 +59,7 @@ input::placeholder {
     color: #888;
 }
 
-button[type="submit"] {
+.botao-login {
     width: 100%;
     padding: 12px;
     margin-top: 1vh;
@@ -153,6 +153,33 @@ a:hover {
     font-family: "Josefin Sans", sans-serif;
     left: 0;
     right: 0;
+}
+
+.lancamentos{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 800;
+    font-size: xx-large;
+}
+.descricao-p{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    background-color: #D9D9D9;
+    color: #000000;
+    font-size: small;
+}
+.botao-add-carrinho{
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* Media Queries for Responsive Design */
