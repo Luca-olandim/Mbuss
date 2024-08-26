@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../App.css'
 import logo from  '../images/logo.jpg'
 import Navbar from '../componentes/navbar';
+import SizeDropdown from '../componentes/dropdown';
 
 
 function Produto(){
@@ -16,6 +17,7 @@ function Produto(){
     const decrement = () => {
         setCount(count- 1);
     };
+    
 
   return (
     <>
@@ -29,26 +31,17 @@ function Produto(){
         <p>CAMISETA BASIC SUPER OVERSIZED WHITE. Camiseta manga curta modelagem oversized,
         confeccionada em tecido de algodão. Possui etiqueta na altura do peito.</p>
         <p id='preco'>R$ 150,00</p>
-        <li class="nav-item dropdown ml-md-auto">
-            <div class="paste-button">
-                <button class="button">Tamanho &nbsp; ▼</button>
-                    <div class="dropdown-content">
-                        <p>P</p>
-                        <p>M</p>
-                        <p>G</p>
-                    </div>
-            </div>   
-        </li>
-        <div>
+					
+	
       <button onClick={decrement}>-</button>
       <span>{count}</span>
       <button onClick={increment}>+</button>
     </div>
 
         <button></button>
-    </div>
-    
+   
+    <SizeDropdown/>
     </>
     );
-  }
+    }
 export default Produto;
