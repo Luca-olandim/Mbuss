@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css'
 
 function SizeDropdown() {
   const [selectedSize, setSelectedSize] = useState('');
@@ -9,15 +10,12 @@ function SizeDropdown() {
 
   return (
     <div>
-      <label htmlFor="size">Escolha o tamanho: </label>
-      <select id="size" value={selectedSize} onChange={handleChange}>
+      <select id="dropdownsizes" value={selectedSize} onChange={handleChange}>
         <option value="" disabled>Selecione um tamanho</option>
         <option value="P">P</option>
         <option value="M">M</option>
         <option value="G">G</option>
-        <option value="GG">GG</option>
       </select>
-      {selectedSize && <p>Tamanho selecionado: {selectedSize}</p>}
     </div>
   );
 }
