@@ -283,7 +283,17 @@ a:hover {
     margin-top: 20px;
     align-self: flex-start;
   }
-  
+  .info-conta{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: large;
+  }
+  .desc-conta{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: medium;
+  }
+
 
 /* Media Queries for Responsive Design */
 

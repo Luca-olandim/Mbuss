@@ -12,6 +12,9 @@ function Home() {
     return (
         <>
             <Navbar />
+            <div className='catalogo'>
+                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
+            </div>
             <CarroNoCeu />
             <div className='lancamentos text-center mt-5 text-black'>
                 <p>Lançamentos</p>
