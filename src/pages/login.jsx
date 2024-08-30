@@ -39,7 +39,7 @@ function Login() {
   return (
     <>
     <div className='img-logo pt-2'>
-      <img src={logo} className='w-[250px] h-auto m-auto'></img>
+      <a href='/'><img src={logo} className='w-[250px] h-auto m-auto'></img></a>
     </div>
     <div className='login-container'>
     <div className='tCadastro'>

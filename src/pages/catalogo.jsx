@@ -4,13 +4,13 @@ import '../App.css'
 import Navbar from '../componentes/navbar';
 import ProdutoLanc from '../componentes/produtoLanc';
 
-function Favoritos(){
+function Catalogo(){
 
     return(
-        <>
+        <>  
             <Navbar/>
             <div className='catalogo'>
-                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Favoritos</a>
+                <a style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
             <div>
                 <button className='filtrar-style border-none rounded-[20px] bg-black mt-14 ml-[13%] w-48 h-9 text-white' type='submit'>Filtrar</button>
@@ -19,8 +19,17 @@ function Favoritos(){
                 <ProdutoLanc/>
                 <ProdutoLanc/>
                 <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
             </div>
         </>
     )
 }
-export default Favoritos
+export default Catalogo

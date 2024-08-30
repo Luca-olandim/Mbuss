@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        customGray: '#B1A9A9', 
+        customGray: '#B1A9A9',
+        inputNav: '#DBDBDB', 
       },
     },
   },

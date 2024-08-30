@@ -8,6 +8,7 @@ import Produto from "./pages/produto";
 import Carrinho from "./pages/carrinho";
 import Favoritos from "./pages/favoritos";
 import Conta from "./pages/conta";
+import Catalogo from "./pages/catalogo";
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Route path="/carrinho" element={<Carrinho/>}/>
           <Route path="/favoritos" element={<Favoritos/>}/>
           <Route path="/conta" element={<Conta/>}/>
+          <Route path="/catalogo" element={<Catalogo/>}/>
+
         </Routes>
       </Router>
     </>

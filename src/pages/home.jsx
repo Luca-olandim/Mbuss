@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css'
 import logo from '../images/logo.jpg';
 import Navbar from '../componentes/navbar';
@@ -13,7 +13,7 @@ function Home() {
         <>
             <Navbar />
             <div className='catalogo'>
-                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
+                <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
             <CarroNoCeu />
             <div className='lancamentos text-center mt-5 text-black'>

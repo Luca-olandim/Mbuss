@@ -12,8 +12,8 @@ function Navbar() {
         <>
             <div className='navbar '>
                 <form className="form">
-                    <label className='w-[310px] border-none bg-[#c1c7cd] rounded-[20px]  flex items-center justify-between pr-[10px]'>
-                    <input className="border-none w-full bg-[#c1c7cd] rounded-[20px] focus:outline-none focus:ring-0 placeholder:text-gray-500" placeholder="Pesquisar para..." required="" type="text" />
+                    <label className='w-[310px] border-none bg-[#DBDBDB] rounded-[20px]  flex items-center justify-between pr-[10px]'>
+                    <input className="border-none w-full bg-[#DBDBDB] rounded-[20px] focus:outline-none focus:ring-0 placeholder:text-gray-500" placeholder="Pesquisar para..." required="" type="text" />
                     <IoSearchSharp size={20} className='text-gray-500' />
                     </label>
                 </form>

@@ -37,23 +37,44 @@ function Cadastro(){
   return (
     <>
     <div className='img-logo pt-2'>
-      <img src={logo} className='w-[250px] h-auto m-auto'></img>
+      <a href="/"><img src={logo} className='w-[250px] h-auto m-auto'></img></a>
     </div>
     <div div className='casdastro-container'>
       <div className='tCadastro '>
         <h1 className='text-2xl mb-2'>Cadastrar Usuário</h1>
       </div>
-      <form onSubmit={handleSubmit}>
-       <div>
+        <form onSubmit={handleSubmit}>
+        <div>
           <div>
-            <input
-              type="text"
-              name="username"
-              placeholder="Email"
-              value={novoUsuario.username}
-              onChange={handleInputChange}
-              className='input-form rounded-[20px]'
-            />
+            <div>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Nome Completo"
+                onChange={handleInputChange}
+                className='input-form rounded-[20px]'
+              />
+            </div>
+            <div>
+              <input
+                type="number"
+                name="cpf"
+                placeholder="CPF"
+                onChange={handleInputChange}
+                className='input-form rounded-[20px]'
+              />
+            </div>
+          </div>
+          <div className='mt-6'>
+          <div>
+              <input
+                type="text"
+                name="username"
+                placeholder="Email"
+                value={novoUsuario.username}
+                onChange={handleInputChange}
+                className='input-form rounded-[20px]'
+              />
           </div>
           <div>
               <input
@@ -64,23 +85,23 @@ function Cadastro(){
               onChange={handleInputChange}
               className='input-form rounded-[20px]'
               />
+            </div>
+            <div>
+              <input
+              type="password"
+              name="password2"
+              placeholder="Confirmar senha"
+              className='input-form rounded-[20px]'>
+              </input>
+            </div>
           </div>
-          <div>
-            <input
-            type="password"
-            name="password2"
-            placeholder="Confirmar senha"
-            className='input-form rounded-[20px]'>
-              
-            </input>
           </div>
-       </div>
-        <button className="botao-login">Cadastrar</button>
-        <a href='/login' className='link-login' >Possui Cadastro? Logar</a>
-      </form>
-    </div>
+          <button className="botao-login">Cadastrar</button>
+          <a href='/login' className='link-login' >Possui Cadastro? Logar</a>
+        </form>
+      </div>
     </>
-    );
-  }
+  );
+}
 
 export default Cadastro;
