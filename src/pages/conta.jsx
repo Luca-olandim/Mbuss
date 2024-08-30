@@ -10,21 +10,21 @@ function Conta(){
             <div className='catalogo'>
                 <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Conta</a>
             </div>
-            <div className='text-center mt-5'>
-                <h1 className='info-conta bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
-                <div className='desc-conta bg-customGray w-1/2 h-28 text-left '>
+            <div className='text-center m-auto  mt-5'>
+                <h1 className='info-conta m-auto  bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
+                <div className='desc-conta m-auto   bg-customGray w-1/2 h-28 text-left '>
                     <p>Nome: </p>
                     <p>CPF: </p>
                 </div>
             </div>
-            <div className='text-center mt-5'>
-                <h1 className='info-conta bg-black text-white w-1/2 h-12 flex justify-center items-center'>Meus Pedidos   </h1>
-                <div className='desc-conta bg-customGray w-1/2 h-28 text-left '>
+            <div className='text-center m-auto mt-5'>
+                <h1 className='info-conta m-auto bg-black text-white w-1/2 h-12 flex justify-center items-center'>Meus Pedidos   </h1>
+                <div className='desc-conta m-auto bg-customGray w-1/2 h-28 text-left '>
                 </div>
             </div>
-            <div className='text-center mt-5'>
-                <h1 className='info-conta bg-black text-white w-1/2 h-12 flex justify-center items-center'>Métodos de Pagamento</h1>
-                <div className='desc-conta bg-customGray w-1/2 h-28 text-left '>
+            <div className='text-center m-auto mt-5'>
+                <h1 className='info-conta m-auto bg-black text-white w-1/2 h-12 flex justify-center items-center'>Métodos de Pagamento</h1>
+                <div className='desc-conta m-auto bg-customGray w-1/2 h-28 text-left '>
                 </div>
             </div>
         </>
