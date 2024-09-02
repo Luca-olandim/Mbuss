@@ -44,7 +44,7 @@ function Cadastro(){
         <h1 className='text-2xl mb-2'>Cadastrar Usuário</h1>
       </div>
         <form onSubmit={handleSubmit}>
-        <div className='flex  '>
+        <div>
           <div>
             <div>
               <input
@@ -65,7 +65,7 @@ function Cadastro(){
               />
             </div>
           </div>
-          <div className='ml-10'>
+          <div className='mt-6'>
           <div>
               <input
                 type="text"

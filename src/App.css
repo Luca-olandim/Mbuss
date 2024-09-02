@@ -214,37 +214,36 @@ a:hover {
     position: relative; /* Para a seta personalizada */
   }
 
-  .produto-container {
+.produto-container {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 32px 0;
   }
   
+  /* Image styling */
   .img-produto {
     width: 300px;
-    height: auto;
-    margin-right: 20px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 32px;
   }
   
+  /* Descrição container styling */
   .descricao-produto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribui espaço entre os elementos */
+    width: 300px;
   }
   
+  /* Description text styling */
   .descricao-produto p {
-    margin: 5px 0;
-    text-align: justify; /* Justifica o texto dos parágrafos */
+    margin-bottom: 8px;
   }
   
+  /* Preço styling */
   #preco {
     font-weight: bold;
-    font-size: 24px;
   }
-  
+
   .modificadores {
     display: flex;
     align-items: center;
@@ -301,6 +300,7 @@ a:hover {
     margin-top: 20px;
     align-self: flex-start;
   }
+
   .info-conta{
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
@@ -316,6 +316,9 @@ a:hover {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
     font-size: medium;
+  }
+  .input-cpf{
+    -webkit-appearance: none;
   }
 
 /* Media Queries for Responsive Design */
