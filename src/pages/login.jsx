@@ -69,6 +69,7 @@ function Login() {
           Login
         </button>
       </form>
+      <a href="/recuperacao">Esqueceu sua senha?</a>
       <a href='/cadastro'>Não possui conta? Cadastre-se</a>
     </div>
     </>

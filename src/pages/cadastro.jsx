@@ -57,7 +57,7 @@ function Cadastro(){
             </div>
             <div className='input-cpf'>
               <input
-                type="number"
+                type="text"
                 name="cpf"
                 placeholder="CPF"
                 onChange={handleInputChange}

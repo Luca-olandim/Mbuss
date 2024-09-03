@@ -403,3 +403,117 @@ a:hover {
     border-radius: 0 !important;
 }
 
+.stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .step1,
+  .step2,
+  .step3 {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .step1 {
+    background-color: black;
+    border-radius: 20px 0 0 20px; /* Bordas arredondadas no início */
+  }
+  
+  .step2 {
+    background-color: #d3d3d3;
+  }
+  
+  .step3 {
+    background-color: #444;
+    border-radius: 0 20px 20px 0; /* Bordas arredondadas no final */
+  }
+  
+  .step1::after,
+  .step2::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+    border-left: 12px solid #000000;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .step2::after {
+    border-left-color: #d3d3d3;
+  }
+  
+  .payment-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+
+  }
+  
+  .payment-selection {
+    flex: 2;
+  }
+  
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .payment-options label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .total-amount {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .total-amount h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .total-amount p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+.buttom-container{
+    text-align: center;
+}
+
+  .buy-button {
+    flex: 1;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+
+  }
+  
+  .buy-button:hover {
+    background-color: #333;
+  }
+  
