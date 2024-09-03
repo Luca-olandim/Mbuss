@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'
+import '../css/carrinho.css'
 import logo from  '../images/logo.jpg'
-import casacotkf from  '../images/casacotkf.jpg'
+import casaco from  '../images/casaco.png'
+import Stepper from '../componentes/stepper'
 
 const Carrinho = () => {
   const [quantity, setQuantity] = useState(1);
@@ -19,16 +19,11 @@ const Carrinho = () => {
     <div className="cart-container">
       <header className="header">
         <img src={logo} alt="Logo" className="logo"/>
-        <div className="progress-bar">
-          <div className="step active">1 - Carrinho</div>
-          <div className="step">2 - Identificação</div>
-          <div className="step">3 - Pagamento</div>
-        </div>
+        <Stepper/>
       </header>
-
       <main className="cart-main">
         <div className="product-info">
-          <img src={casacotkf} alt="Produto" className="casacotkf"/>
+          <img src={casaco} alt="Produto" className="casaco"/>
           <div className="product-details">
             <div className="quantity">
               <button onClick={decreaseQuantity}>-</button>
@@ -62,7 +57,7 @@ const Carrinho = () => {
           <p>Valor Total: R${total.toFixed(2)}</p>
         </div>
 
-        <button className="continue">Continuar</button>
+        <button className="continue" >Continuar</button>
       </main>
     </div>
   );

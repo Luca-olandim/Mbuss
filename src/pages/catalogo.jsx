@@ -22,12 +22,6 @@ function Catalogo(){
                 <ProdutoLanc/>
                 <ProdutoLanc/>
                 <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
             </div>
         </>
     )

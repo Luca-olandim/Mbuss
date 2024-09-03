@@ -23,9 +23,6 @@ function Home() {
                 <ProdutoLanc/>
                 <ProdutoLanc/>
                 <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
             </div>
         </>
     );
