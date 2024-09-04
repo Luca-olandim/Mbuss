@@ -200,107 +200,6 @@ a:hover {
     font-style: normal;
 }
 
-#dropdownsizes{
-    appearance: none; /* Remove a seta padrão do dropdown */
-    -webkit-appearance: none; /* Compatibilidade com Safari */
-    -moz-appearance: none; /* Compatibilidade com Firefox */
-    background-color: #e0e0e0; /* Cor de fundo */
-    border: none; /* Remove borda padrão */
-    border-radius: 20px; /* Borda arredondada */
-    padding: 10px 30px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #000000; /* Cor do texto */
-    cursor: pointer; /* Cursor para indicar clicável */
-    position: relative; /* Para a seta personalizada */
-  }
-
-.produto-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 32px 0;
-  }
-  
-  /* Image styling */
-  .img-produto {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-right: 32px;
-  }
-  
-  /* Descrição container styling */
-  .descricao-produto {
-    width: 300px;
-  }
-  
-  /* Description text styling */
-  .descricao-produto p {
-    margin-bottom: 8px;
-  }
-  
-  /* Preço styling */
-  #preco {
-    font-weight: bold;
-  }
-
-  .modificadores {
-    display: flex;
-    align-items: center;
-    justify-content: 10px; /* Justifica o espaço entre o dropdown e os botões */
-    margin-top: 10px; /* Espaço entre a descrição e os modificadores */
-  }
-  
-  .modificadores > div {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-  }
-  
-  .modificadores select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .modificadores button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  .modificadores span {
-    font-size: 18px;
-    margin: 0 10px;
-  }
-  
-  button.comprar {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 40px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    align-self: flex-start;
-  }
-
   .info-conta{
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
@@ -412,16 +311,6 @@ a:hover {
   font-family: Arial, sans-serif;
 }
 
-.step1,
-.step2,
-.step3 {
-  flex: 1;
-  padding: 10px 20px; /* Ajusta o padding conforme necessário */
-  text-align: center;
-  color: white;
-  position: relative;
-  font-size: 1.1em; /* Mantém o tamanho da fonte */
-}
 
 .step1 {
   background-color: black;
@@ -452,72 +341,21 @@ a:hover {
   z-index: 1;
 }
 
+.step1,
+.step2,
+.step3 {
+  flex: 1;
+  padding: 8px 82px; /* Ajusta o padding conforme necessário */
+  text-align: center;
+  color: white;
+  position: relative;
+  font-size: 1.2em; /* Mantém o tamanho da fonte */
+  margin-top: 1%;
+}
 .step2::after {
   border-left-color: #d3d3d3;
 }
 
-  
-  .payment-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 80%;
-    margin: 20px auto;
-
-  }
-  
-  .payment-selection {
-    flex: 2;
-  }
-  
-  .payment-options {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  
-  .payment-options label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .total-amount {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .total-amount h3 {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .total-amount p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-.buttom-container{
-    text-align: center;
-}
-
-  .buy-button {
-    flex: 1;
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 18px;
-
-  }
-  
-  .buy-button:hover {
-    background-color: #333;
-  }
   
   .favorite-icon-container {
     background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
@@ -543,4 +381,17 @@ a:hover {
   top: 0;
   right: 0;
   z-index: 1; /* Ajuste conforme necessário */
+}
+
+
+.botoes, .botoes2{
+  display: flex;
+  width: fit-content;
+}
+
+.botoes{
+  width: 97%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
 }

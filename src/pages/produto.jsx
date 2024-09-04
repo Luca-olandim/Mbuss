@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'
+import '../css/produto.css'
 import logo from  '../images/logo.jpg'
 import Navbar from '../componentes/navbar';
 import SizeDropdown from '../componentes/dropdown';
@@ -32,6 +32,7 @@ function Produto(){
         alt="Second slide"
       />
       <div className='descricao-produto' >
+      <a id='link3d' href="/produto3d"><button id='button3d'>3D</button></a>
         <p>CAMISETA BASIC SUPER OVERSIZED WHITE. Camiseta manga curta modelagem oversized,
           confeccionada em tecido de algodão. Possui etiqueta na altura do peito.</p>
         <p id='preco'>R$ 150,00</p>	

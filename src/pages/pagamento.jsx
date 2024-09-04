@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
+import '../css/pagamento.css';
 import logo from  '../images/logo.jpg';
 import Stepper from '../componentes/stepper';
 
@@ -26,6 +26,7 @@ function Pagamento(){
               type="radio"
               name="payment"
               value="Pix"
+              className='input-radio'
               checked={paymentMethod === "Pix"}
               onChange={handlePaymentChange}
             />

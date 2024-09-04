@@ -17,47 +17,57 @@ const Carrinho = () => {
 
   return (
     <div className="cart-container">
-  <header className="header">
-    <img src={logo} alt="Logo" className="logo"/>
-    <Stepper/>
-  </header>
-  <main className="cart-main">
-    <div className="product-info">
-      <img src={casaco} alt="Produto" className="casaco"/>
-      <div className="product-details">
-        <div className="quantity">
-          <button onClick={decreaseQuantity}>-</button>
-          <span>{quantity}</span>
-          <button onClick={increaseQuantity}>+</button>
+      <header className="header">
+        <img src={logo} alt="Logo" className="logo"/>
+        <Stepper/>
+      </header>
+      <main className="cart-main">
+        <div className="product-info">
+          <img src={casaco} alt="Produto" className="casaco"/>
+          <div className="product-details">
+            <div className="quantity">
+              <span>Quantidade:</span> <br />
+              <div className='counters'>
+                <button id='minusproductbutton' onClick={decreaseQuantity}>-</button>
+                <span id='quantitynumber'>{quantity}</span>
+                <button id='addproductbutton' onClick={increaseQuantity}>+</button>
+              </div>
+            </div>
+            <div className="price">
+              <div className='price-piece'>
+                <span>Valor por peça: <br /> R${pricePerItem.toFixed(2)}</span>
+              </div>
+              <div className='price-total'>
+                <span>Valor total: <br /> R${total.toFixed(2)}</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="price">
-          <span>Valor por peça: R${pricePerItem.toFixed(2)}</span>
-          <span>Valor total: R${total.toFixed(2)}</span>
+        <div className='disc-main'>
+          <div className='disc-delivery'>
+            <div className="discount">
+              <label>Cupon de Desconto</label>
+              <input type="text" />
+              <button>Aplicar</button>
+            </div>
+            <div className="delivery">
+              <label>Prazo de Entrega</label>
+              <input type="text" placeholder="CEP"/>
+              <button>Calcular</button>
+            </div>
+          </div>
+          <div className="summary">
+            <h3>Resumo da Compra</h3>
+            <p>Valor do produto: R${pricePerItem.toFixed(2)}</p>
+            <p>Frete: R$0.00</p>
+            <p>Cupom de desconto: R$0.00</p>
+            <p>Valor Total: R${total.toFixed(2)}</p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div>
-    <div className="discount">
-      <label>Cupon de Desconto</label>
-      <input type="text" />
-      <button>Aplicar</button>
-    </div>
-    <div className="delivery">
-      <label>Prazo de Entrega</label>
-      <input type="text" placeholder="CEP"/>
-      <button>Calcular</button>
-    </div>
-    <div className="summary">
-      <h3>Resumo da Compra</h3>
-      <p>Valor do produto: R${pricePerItem.toFixed(2)}</p>
-      <p>Frete: R$0.00</p>
-      <p>Cupom de desconto: R$0.00</p>
-      <p>Valor Total: R${total.toFixed(2)}</p>
-    </div>
-    </div>
-    <button className="continue">Continuar</button>
-  </main>
-</div>
+      </main>
+    
+      <a href="/pagamento"><button className="continue">Continuar</button><br /></a>
+  </div>
   );
 };
 

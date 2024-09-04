@@ -1,0 +1,67 @@
+
+.payment-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+
+  }
+  
+  .payment-selection {
+    flex: 2;
+  }
+  
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .input-radio{
+    accent-color: #000000;
+    background-color: #000000;
+    color: #000000;
+  }
+  
+  .payment-options label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .total-amount {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .total-amount h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .total-amount p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+.buttom-container{
+    text-align: center;
+}
+
+  .buy-button {
+    flex: 1;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+
+  }
+  
+  .buy-button:hover {
+    background-color: #333;
+  }

@@ -1,0 +1,110 @@
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 32px 0;
+  }
+  
+  /* Image styling */
+  .img-produto {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 32px;
+  }
+  
+  /* Descrição container styling */
+  .descricao-produto {
+    width: 300px;
+  }
+  
+  /* Description text styling */
+  .descricao-produto p {
+    margin-bottom: 8px;
+  }
+  
+  /* Preço styling */
+  #preco {
+    font-weight: bold;
+  }
+
+  .modificadores {
+    display: flex;
+    align-items: center;
+    justify-content: 10px; /* Justifica o espaço entre o dropdown e os botões */
+    margin-top: 10px; /* Espaço entre a descrição e os modificadores */
+  }
+  
+  .modificadores > div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .modificadores select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .modificadores button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .modificadores span {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  
+  button.comprar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  #dropdownsizes{
+    appearance: none; /* Remove a seta padrão do dropdown */
+    -webkit-appearance: none; /* Compatibilidade com Safari */
+    -moz-appearance: none; /* Compatibilidade com Firefox */
+    background-color: #e0e0e0; /* Cor de fundo */
+    border: none; /* Remove borda padrão */
+    border-radius: 20px; /* Borda arredondada */
+    padding: 10px 30px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #000000; /* Cor do texto */
+    cursor: pointer; /* Cursor para indicar clicável */
+    position: relative; /* Para a seta personalizada */
+  }
+
+#button3d{
+    border-radius: 98%;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+#link3d{
+    width: 20px;
+}

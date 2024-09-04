@@ -12,6 +12,8 @@ import Catalogo from "./pages/catalogo";
 import Recuperacao from "./pages/recuperacao";
 import Pagamento from "./pages/pagamento";
 import Confirmacaopag from "./pages/confirmacaopag";
+import Produto3d from "./pages/produto3d";
+import Catalogoadmin from "./pages/catalogoadmin";
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
           <Route path="/recuperacao" element={<Recuperacao/>}/>
           <Route path="/pagamento" element={<Pagamento/>}/>
           <Route path="/confirmacaopag" element={<Confirmacaopag/>}/>
+          <Route path="/produto3d" element={<Produto3d/>}/>
+          <Route path="/catalogoadmin" element={<Catalogoadmin/>}/>
         </Routes>
       </Router>
     </>

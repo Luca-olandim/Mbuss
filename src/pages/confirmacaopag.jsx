@@ -10,7 +10,7 @@ function Confirmacaopag() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/'); 
-   }, 3500); // 1,5 segundos
+   }, 3500); // 3,5 segundos
 
    return () => clearTimeout(timer); 
  }, [navigate]);
@@ -18,7 +18,7 @@ function Confirmacaopag() {
   return (
     <div className='main'>
       <div className='logo'>
-        <a href='/'><img src={logo} alt='Logo' className='logo-img' /></a>
+        <a href='/'><img src={logo2} alt='Logo' className='logo-img' /></a>
       </div>
       <img src={check} alt='Check' className='check-img' />
       <h1 className='message-text'>Pagamento Concluído! Obrigado pela Compra.</h1>
