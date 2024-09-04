@@ -17,49 +17,47 @@ const Carrinho = () => {
 
   return (
     <div className="cart-container">
-      <header className="header">
-        <img src={logo} alt="Logo" className="logo"/>
-        <Stepper/>
-      </header>
-      <main className="cart-main">
-        <div className="product-info">
-          <img src={casaco} alt="Produto" className="casaco"/>
-          <div className="product-details">
-            <div className="quantity">
-              <button onClick={decreaseQuantity}>-</button>
-              <span>{quantity}</span>
-              <button onClick={increaseQuantity}>+</button>
-            </div>
-            <div className="price">
-              <span>R${pricePerItem.toFixed(2)}</span>
-              <span>R${total.toFixed(2)}</span>
-            </div>
-          </div>
+  <header className="header">
+    <img src={logo} alt="Logo" className="logo"/>
+    <Stepper/>
+  </header>
+  <main className="cart-main">
+    <div className="product-info">
+      <img src={casaco} alt="Produto" className="casaco"/>
+      <div className="product-details">
+        <div className="quantity">
+          <button onClick={decreaseQuantity}>-</button>
+          <span>{quantity}</span>
+          <button onClick={increaseQuantity}>+</button>
         </div>
-
-        <div className="discount">
-          <label>Cupon de Desconto</label>
-          <input type="text" />
-          <button>Aplicar</button>
+        <div className="price">
+          <span>Valor por peça: R${pricePerItem.toFixed(2)}</span>
+          <span>Valor total: R${total.toFixed(2)}</span>
         </div>
-
-        <div className="delivery">
-          <label>Prazo de Entrega</label>
-          <input type="text" placeholder="CEP"/>
-          <button>Calcular</button>
-        </div>
-
-        <div className="summary">
-          <h3>Resumo da Compra</h3>
-          <p>Valor do produto: R${pricePerItem.toFixed(2)}</p>
-          <p>Frete: R$0.00</p>
-          <p>Cupom de desconto: R$0.00</p>
-          <p>Valor Total: R${total.toFixed(2)}</p>
-        </div>
-
-        <button className="continue" >Continuar</button>
-      </main>
+      </div>
     </div>
+    <div>
+    <div className="discount">
+      <label>Cupon de Desconto</label>
+      <input type="text" />
+      <button>Aplicar</button>
+    </div>
+    <div className="delivery">
+      <label>Prazo de Entrega</label>
+      <input type="text" placeholder="CEP"/>
+      <button>Calcular</button>
+    </div>
+    <div className="summary">
+      <h3>Resumo da Compra</h3>
+      <p>Valor do produto: R${pricePerItem.toFixed(2)}</p>
+      <p>Frete: R$0.00</p>
+      <p>Cupom de desconto: R$0.00</p>
+      <p>Valor Total: R${total.toFixed(2)}</p>
+    </div>
+    </div>
+    <button className="continue">Continuar</button>
+  </main>
+</div>
   );
 };
 

@@ -19,6 +19,9 @@ function Favoritos(){
                 <ProdutoLanc/>
                 <ProdutoLanc/>
                 <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
+                <ProdutoLanc/>
             </div>
         </>
     )

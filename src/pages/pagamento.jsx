@@ -58,7 +58,7 @@ function Pagamento(){
         <p>$$$$$</p>
       </div>
       <div className="button-container">
-        <button className="buy-button">Comprar</button>
+        <a href="/confirmacaopag"><button className="buy-button">Comprar</button></a>
       </div>
     </div>
     </>
