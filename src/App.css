@@ -395,3 +395,52 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
+
+.remove-icon-container {
+    background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
+    border-radius: 50%; /* Tornar o fundo redondo */
+    padding: 5px; /* Espaço entre o ícone e a borda do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Largura do círculo */
+    height: 60px; /* Altura do círculo */
+}
+.remove-icon {
+  width: 32px;  
+  height: auto; 
+}
+
+.remove-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1; /* Ajuste conforme necessário */
+}
+.edit-icon-container {
+    background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
+    border-radius: 50%; /* Tornar o fundo redondo */
+    padding: 5px; /* Espaço entre o ícone e a borda do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Largura do círculo */
+    height: 60px; /* Altura do círculo */
+}
+.edit-icon {
+  width: 32px;  
+  height: auto; 
+}
+
+.edit-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1; /* Ajuste conforme necessário */
+}
+
+#alinkbutton{
+    width: 20%;
+    margin: 40px;
+}
+

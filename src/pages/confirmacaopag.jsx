@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import logo from '../images/logo.jpg';
+import logo2 from '../images/logo.jpg';
 import check from '../images/verificado.png';
 import '../css/confirmacaopag.css';
 
@@ -10,7 +10,7 @@ function Confirmacaopag() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/'); 
-   }, 3500); // 3,5 segundos
+   }, 2500); // 2,5 segundos
 
    return () => clearTimeout(timer); 
  }, [navigate]);

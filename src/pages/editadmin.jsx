@@ -1,10 +1,8 @@
-import React, { useState} from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../App.css'
-import Navbar from '../componentes/navbar';
-import ProdutoLanc from '../componentes/produtoLanc';
+import Navbar from '../componentes/navbar.jsx';
+import ProdutoEdit from '../componentes/produtoEdit.jsx';
 
-function Catalogoadmin(){
+function Editadmin(){
 
     return(
         <>  
@@ -21,14 +19,14 @@ function Catalogoadmin(){
                 </div>
             </div>
             <div className='imgs-lancamentos p-8 mt-10 flex flex-row justify-center flex-wrap gap-52'>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
+                <ProdutoEdit/>
+                <ProdutoEdit/>
+                <ProdutoEdit/>
+                <ProdutoEdit/>
+                <ProdutoEdit/>
+                <ProdutoEdit/>
             </div>
         </>
-    )
+    );
 }
-export default Catalogoadmin
+export default Editadmin;
