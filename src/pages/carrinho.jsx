@@ -18,7 +18,7 @@ const Carrinho = () => {
   return (
     <div className="cart-container">
       <header className="header">
-        <img src={logo} alt="Logo" className="logo"/>
+       <a href='/'><img src={logo} alt="Logo" className="logo"/></a> 
         <Stepper/>
       </header>
       <main className="cart-main">
@@ -46,7 +46,7 @@ const Carrinho = () => {
         <div className='disc-main'>
           <div className='disc-delivery'>
             <div className="discount">
-              <label>Cupon de Desconto</label>
+              <label>Cupom de Desconto</label>
               <input type="text" />
               <button>Aplicar</button>
             </div>

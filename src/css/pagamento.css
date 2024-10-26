@@ -2,6 +2,7 @@
 .payment-container {
     display: flex;
     justify-content: space-between;
+    font-family: "Josefin Sans", sans-serif;
     align-items: center;
     padding: 20px;
     width: 80%;

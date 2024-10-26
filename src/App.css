@@ -219,6 +219,7 @@ a:hover {
   .input-cpf{
     -webkit-appearance: none;
   }
+  
 
 /* Media Queries for Responsive Design */
 
@@ -306,9 +307,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%; /* Aumenta a largura total para quase toda a página */
+  width: 90%; 
   margin: 20px auto;
-  font-family: Arial, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 
