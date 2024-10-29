@@ -4,36 +4,35 @@ import '../App.css'
 import { useNavigate } from 'react-router-dom';
 import logo from  '../images/logo.jpg'
 
-const logar = async (username, password) => {
+const logar = async (email, senha) => {
   try {
-    const response = await axios.post('http://localhost:8090/api/login', {
-      username: username,
-      password: password,
+    const response = await axios.post('http://localhost:3333/api/login', {
+      email: email,
+      senha: senha,
     });
     return response.data;
   } catch (error) {
     throw error;
   }
 };
+
 function Login() {
   const navigate = useNavigate()
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
   const handleLogin = async () => {
     try {
-      const response = await logar(username, password);
+      const response = await logar(email, senha);
       if(response == true){
         navigate('/home')
       }
       else{
-        alert("Usuario ou senha incorretos")
+        alert("Email ou senha incorretos")
       }
       } catch (error) {
         console.error('Erro ao se logar:', error);
       }
-
-
   };
   
   return (
@@ -50,8 +49,8 @@ function Login() {
           <input
           placeholder='Usuário'
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className='input-form rounded-[20px] mb-0'
           />
         </label>
@@ -60,8 +59,8 @@ function Login() {
           <input
           placeholder='Senha'
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
             className='input-form rounded-[20px] mt-1 mb-5'
           />
         </label>
