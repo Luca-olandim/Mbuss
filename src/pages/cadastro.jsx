@@ -4,33 +4,43 @@ import { useNavigate } from 'react-router-dom';
 import '../App.css'
 import logo from  '../images/logo.jpg'
 
-function Cadastro(){
-    const navigate = useNavigate()
-    const [novoUsuario, setNovousuario] = useState({
-    username: '',
-    password: '',
-    });
-    
-  
+function Cadastro() {
+  const navigate = useNavigate();
+  const [novoUsuario, setNovoUsuario] = useState({
+    email: '',
+    senha: '',
+    nome: '',
+    cpf: '',
+    telefone: '',
+  });
+  const [error, setError] = useState('');
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setNovousuario((prevUsuario) => ({
+    setNovoUsuario((prevUsuario) => ({
       ...prevUsuario,
       [name]: value,
     }));
-  };  
-  //POST
+  };
+
+  // POST
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:8090/api', novoUsuario);
-      setNovousuario({
-        username: '',
-        password: '',
-        });
-    navigate("/")    
+      await axios.post('http://localhost:3333/usuarios', novoUsuario);
+      // Limpar os campos do formulário
+      setNovoUsuario({
+        email: '',
+        senha: '',
+        nome: '',
+        cpf: '',
+        telefone: '',
+      });
+      setError('');
+      navigate('/');
     } catch (error) {
-      console.error('Erro ao criar usuario:', error);
+      console.error('Erro ao criar usuário:', error);
+      setError('Erro ao criar usuário. Tente novamente.');
     }
   };
 
@@ -60,6 +70,15 @@ function Cadastro(){
                 type="text"
                 name="cpf"
                 placeholder="CPF"
+                onChange={handleInputChange}
+                className='input-form rounded-[20px]'
+              />
+            </div>
+            <div className='input-cpf'>
+              <input
+                type="text"
+                name="telefone"
+                placeholder="Telefone"
                 onChange={handleInputChange}
                 className='input-form rounded-[20px]'
               />
