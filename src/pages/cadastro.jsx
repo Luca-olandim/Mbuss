@@ -27,12 +27,13 @@ function Cadastro() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(novoUsuario);
       await axios.post('http://localhost:3333/usuarios', novoUsuario);
       // Limpar os campos do formulário
       setNovoUsuario({
+        nome: '',
         email: '',
         senha: '',
-        nome: '',
         cpf: '',
         telefone: '',
       });
@@ -49,7 +50,7 @@ function Cadastro() {
     <div className='img-logo pt-2'>
       <a href="/"><img src={logo} className='w-[250px] h-auto m-auto'></img></a>
     </div>
-    <div div className='casdastro-container'>
+    <div className='casdastro-container'>
       <div className='tCadastro '>
         <h1 className='text-2xl mb-2'>Cadastrar Usuário</h1>
       </div>
@@ -60,6 +61,7 @@ function Cadastro() {
               <input
                 type="text"
                 name="nome"
+                value={novoUsuario.nome}
                 placeholder="Nome Completo"
                 onChange={handleInputChange}
                 className='input-form rounded-[20px]'
@@ -69,6 +71,7 @@ function Cadastro() {
               <input
                 type="text"
                 name="cpf"
+                value={novoUsuario.cpf}
                 placeholder="CPF"
                 onChange={handleInputChange}
                 className='input-form rounded-[20px]'
@@ -78,6 +81,7 @@ function Cadastro() {
               <input
                 type="text"
                 name="telefone"
+                value={novoUsuario.telefone}
                 placeholder="Telefone"
                 onChange={handleInputChange}
                 className='input-form rounded-[20px]'
@@ -88,9 +92,9 @@ function Cadastro() {
           <div>
               <input
                 type="text"
-                name="username"
+                name="email"
                 placeholder="Email"
-                value={novoUsuario.username}
+                value={novoUsuario.email}
                 onChange={handleInputChange}
                 className='input-form rounded-[20px]'
               />
@@ -98,9 +102,9 @@ function Cadastro() {
           <div>
               <input
               type="password"
-              name="password"
+              name="senha"
               placeholder="Senha"
-              value={novoUsuario.password}
+              value={novoUsuario.senha}
               onChange={handleInputChange}
               className='input-form rounded-[20px]'
               />

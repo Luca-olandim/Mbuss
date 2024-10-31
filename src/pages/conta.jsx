@@ -15,10 +15,10 @@ function Conta(){
             <div className='text-center m-auto  mt-5'>
                 <h1 className='info-conta m-auto  bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
                 <div className='desc-conta m-auto   bg-customGray w-1/2 h-28 text-left'>
-                    <p className='ml-2'>Nome: João Pedro </p>
-                    <p className='ml-2'>CPF: 12345676</p>
-                    <p className='ml-2'>Celular: 48 9876354</p>
-                    <p className='ml-2'>Endereço: R. Onde o vento faz a curva</p>
+                    <p className='ml-2'>Nome: </p>
+                    <p className='ml-2'>CPF: </p>
+                    <p className='ml-2'>Celular: </p>
+                    <p className='ml-2'>Email: </p>
                 </div>
             </div>
             <div className='text-center m-auto mt-5'>
