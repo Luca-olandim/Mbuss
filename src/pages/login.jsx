@@ -47,25 +47,21 @@ function Login() {
         <div className='tCadastro'>
           <h1 className='text-2xl mb-2'>Login</h1>
         </div>
-        <label>
           <input
-            placeholder='Usuário'
+            placeholder='Email'
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='input-form rounded-[20px]'
+            className='input-login rounded-[20px] mt-2 mb-1'
           />
-        </label>
         <br />
-        <label>
           <input
             placeholder='Senha'
             type="password"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
-            className='input-form rounded-[20px] mt-1 mb-5'
+            className='input-login rounded-[20px] mt-2 mb-4'
           />
-        </label>
         <button className="botao-login" onClick={handleLogin}>
           Login
         </button>
