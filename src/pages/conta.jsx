@@ -1,33 +1,44 @@
-import React, { useState} from 'react';
-import '../App.css'
+import React, { useState, useEffect } from 'react';
+import '../App.css';
 import Navbar from '../componentes/navbar';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Conta(){
-
+function Conta() {
     const [userInfo, setUserInfo] = useState({});
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const storedData = JSON.parse(localStorage.getItem('dados usuario'));
-        if (storedData && Array.isArray(storedData) && storedData.length > 0) {
-            setUserInfo(storedData[0]);
+        const correto = localStorage.getItem('dados usuario');
+        
+        // Check if the data exists and is not null
+        if (correto) {
+            try {
+                // Parse the stored data safely
+                const storedData = JSON.parse(correto);
+
+                // Ensure the data is an array and contains at least one item
+                if (Array.isArray(storedData) && storedData.length > 0) {
+                    setUserInfo(storedData[0]); // Set user info to the first element of the array
+                }
+            } catch (e) {
+                console.error("Error parsing stored user data:", e);
+            }
         }
     }, []);
 
-    const sairConta = () =>{
-        localStorage.clear()
-        navigate('/login')
-    }
-    return(
+    const sairConta = () => {
+        localStorage.clear();
+        navigate('/login');
+    };
+
+    return (
         <>
-            <Navbar/>
+            <Navbar />
             <div className='catalogo'>
                 <a style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Conta</a>
             </div>
-            <div className='text-center m-auto  mt-5'>
-                <h1 className='info-conta m-auto  bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
+            <div className='text-center m-auto mt-5'>
+                <h1 className='info-conta m-auto bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
                 <div className='desc-conta m-auto bg-customGray w-1/2 h-28 text-left'>
                     <p className='ml-2'>Nome: {userInfo.nome}</p>
                     <p className='ml-2'>CPF: {userInfo.cpf}</p>
@@ -45,7 +56,7 @@ function Conta(){
             </div>
             <div className='text-center m-auto mt-5'>
                 <h1 className='info-conta m-auto bg-black text-white w-1/2 h-12 flex justify-center items-center'>Métodos de Pagamento</h1>
-                <div className='desc-conta m-auto bg-customGray w-1/2 h-28 text-left '>
+                <div className='desc-conta m-auto bg-customGray w-1/2 h-28 text-left'>
                     <p className='ml-2'>Cartão de Crédito: 8765 7645 4234 8123</p>
                 </div>
             </div>
@@ -53,6 +64,7 @@ function Conta(){
                 <button className='text-white bg-red-700 w-20 h-10 rounded-[20px] josefin-sans font-bold' onClick={sairConta}>Sair</button>
             </div>
         </>
-    )
+    );
 }
-export default Conta
+
+export default Conta;

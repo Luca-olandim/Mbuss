@@ -22,11 +22,18 @@ function Login() {
   const [senha, setSenha] = useState('');
 
   const handleLogin = async () => {
+    if( !email || !senha){
+      alert("Preencha todos os campos")
+      return
+    }
     try {
       const response = await logar(email, senha);
-      console.log("Login certo", response.user)
-      localStorage.setItem("dados usuario", JSON.stringify(response.user))
+      console.log("Login certo", response)
       if (response.success == true) {
+        localStorage.setItem("dados usuario",  JSON.stringify(response.user))
+        if(response.user.email === "adm@gmail.com" && response.user.senha === "adm123" ){
+          localStorage.setItem("é adm?", true)
+        } 
         navigate('/')
       }
       else {
@@ -49,6 +56,7 @@ function Login() {
         </div>
           <input
             placeholder='Email'
+            required
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -58,6 +66,7 @@ function Login() {
           <input
             placeholder='Senha'
             type="password"
+            required
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             className='input-login rounded-[20px] mt-2 mb-4'

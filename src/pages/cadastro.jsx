@@ -100,8 +100,6 @@ function Cadastro() {
                   type="password"
                   name="senha"
                   placeholder="Repetir Senha"
-                  value={novoUsuario.senha}
-                  onChange={handleInputChange}
                   className="input-form rounded-[20px] w-40"
                 />
               </div>
