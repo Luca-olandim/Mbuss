@@ -52,53 +52,60 @@ function Cadastro() {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col space-y-4">
-            <div></div>
-            <input
-              type="text"
-              name="nome"
-              value={novoUsuario.nome}
-              placeholder="Nome"
-              onChange={handleInputChange}
-              className="input-form rounded-[20px]"
-            />
-            <input
-              type="text"
-              name="cpf"
-              value={novoUsuario.cpf}
-              placeholder="CPF"
-              onChange={handleInputChange}
-              className="input-form rounded-[20px]"
-            />
-            <input
-              type="text"
-              name="telefone"
-              value={novoUsuario.telefone}
-              placeholder="Telefone"
-              onChange={handleInputChange}
-              className="input-form rounded-[20px]"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              value={novoUsuario.email}
-              onChange={handleInputChange}
-              className="input-form rounded-[20px]"
-            />
-            <input
-              type="password"
-              name="senha"
-              placeholder="Senha"
-              value={novoUsuario.senha}
-              onChange={handleInputChange}
-              className="input-form rounded-[20px]"
-            />
-            <input
-              type="password"
-              name="password2"
-              placeholder="Confirmar senha"
-              className="input-form rounded-[20px]"
-            />
+            <div className='inputs-cadastro'>
+              <div>
+                <input
+                  type="text"
+                  name="nome"
+                  value={novoUsuario.nome}
+                  placeholder="Nome"
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] mb-2 w-40"
+                />
+                <input
+                  type="text"
+                  name="cpf"
+                  value={novoUsuario.cpf}
+                  placeholder="CPF"
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] mb-2 w-40"
+                />
+                <input
+                  type="text"
+                  name="telefone"
+                  value={novoUsuario.telefone}
+                  placeholder="Telefone"
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] w-40"
+                />
+              </div>
+              <div className='ml-2'>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  value={novoUsuario.email}
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] mb-2 w-40"
+                />
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Senha"
+                  value={novoUsuario.senha}
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] w-40 mb-2"
+                />
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Repetir Senha"
+                  value={novoUsuario.senha}
+                  onChange={handleInputChange}
+                  className="input-form rounded-[20px] w-40"
+                />
+              </div>
+            </div>
             <button className="botao-login" type="submit">Cadastrar</button>
             <a href="/login" className="link-login">Possui Cadastro? Logar</a>
           </div>

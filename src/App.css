@@ -14,7 +14,7 @@ body{
 }
 
 .casdastro-container{
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -28,6 +28,10 @@ body{
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
+}
+.inputs-cadastro{
+  display: flex;
+  flex-direction: row;
 }
 .input-login{
   width: 98%;
@@ -59,7 +63,7 @@ input::placeholder {
     color: #888;
 }
 
-.botao-login {
+.botao-login{
     width: 100%;
     padding: 12px;
     margin-top: 1vh;

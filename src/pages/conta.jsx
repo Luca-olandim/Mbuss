@@ -24,7 +24,7 @@ function Conta(){
         <>
             <Navbar/>
             <div className='catalogo'>
-                <a href="#" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Conta</a>
+                <a style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Conta</a>
             </div>
             <div className='text-center m-auto  mt-5'>
                 <h1 className='info-conta m-auto  bg-black text-white w-1/2 h-12 flex justify-center items-center'>Minhas Informações</h1>
