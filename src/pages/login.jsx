@@ -74,7 +74,6 @@ function Login() {
         <button className="botao-login" onClick={handleLogin}>
           Login
         </button>
-        <a href="/recuperacao">Esqueceu sua senha?</a>
         <a href='/cadastro'>Não possui conta? Cadastre-se</a>
       </div>
     </>
