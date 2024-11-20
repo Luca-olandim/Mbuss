@@ -11,7 +11,7 @@ function Home() {
 
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <div className='catalogo'>
                 <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>

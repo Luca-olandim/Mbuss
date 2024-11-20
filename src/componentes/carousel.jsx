@@ -1,6 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import slideImage from '../images/asdsadsafdsa.png';
+
+// Importação das imagens
+import banner1 from '../images/banner1.png';
+import banner2 from '../images/banner2.png';
+import banner3 from '../images/banner3.png';
 
 function CarroNoCeu() {
   return (
@@ -8,26 +12,30 @@ function CarroNoCeu() {
       <Carousel.Item>
         <img
           className="d-block w-100 h-[550px] bg-gray-300"
-          src={slideImage}
-          alt="First slide"
+          src={banner1}
+          alt="Primeiro slide"
         />
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
+
+      {/* Segundo banner */}
       <Carousel.Item>
         <img
           className="d-block w-100 h-[550px] bg-gray-300"
-          src="https://www.infomoney.com.br/wp-content/uploads/2024/04/neymar-al-hilal.webp?fit=767%2C575&quality=50&strip=all"
-          alt="Second slide"
+          src={banner2}
+          alt="Segundo slide"
         />
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
+
+      {/* Terceiro banner */}
       <Carousel.Item>
         <img
           className="d-block w-100 h-[550px] bg-gray-300"
-          src="https://cdn.oantagonista.com/uploads/2024/06/Neymar-se-desculpa-com-torcida-do-Santos-apos-aparecer-com-camisa-do-Flamengo.jpg"
-          alt="Third slide"
+          src={banner3}
+          alt="Terceiro slide"
         />
         <Carousel.Caption>
         </Carousel.Caption>
