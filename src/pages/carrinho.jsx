@@ -12,7 +12,6 @@ const Carrinho = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [discount, setDiscount] = useState(0);
   const [cupom, setCupom] = useState('');
-  const [cupomMessage, setCupomMessage] = useState('');
 
   const pricePerItem = 150.0;
   const subtotal = quantity * pricePerItem;
@@ -52,10 +51,10 @@ const Carrinho = () => {
     if (cupom === 'SENNA15') {
       const desconto = subtotal * 0.15; // 15% de desconto
       setDiscount(desconto);
-      setCupomMessage(`Cupom aplicado! Você ganhou R$${desconto.toFixed(2)} de desconto.`);
+      alert(`Cupom aplicado! Você ganhou R$${desconto.toFixed(2)} de desconto.`);
     } else {
       setDiscount(0);
-      setCupomMessage('Cupom inválido. Tente novamente.');
+      alert('Cupom inválido. Tente novamente.');
     }
   };
 
@@ -106,11 +105,6 @@ const Carrinho = () => {
                 onChange={(e) => setCupom(e.target.value)}
               />
               <button onClick={handleApplyDiscount}>Aplicar</button>
-              {cupomMessage && (
-                <p className={`cupom-message ${cupom === 'SENNA15' ? 'success' : 'error'}`}>
-                  {cupomMessage}
-                </p>
-              )}
             </div>
             <div className="delivery">
               <label>Calcular Frete</label>
