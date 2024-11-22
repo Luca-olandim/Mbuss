@@ -16,6 +16,8 @@ import Catalogoadmin from "./pages/catalogoadmin";
 import Removeadmin from "./pages/removeadmin";
 import Editadmin from "./pages/editadmin";
 import AddProductPage from "./pages/AddProductPage";
+import CamisetaJapan3D from "./pages/CamisetaJapan3D";
+import ProdutoCamisetaJapan from "./pages/produtoCamisetaJapan";
 
 function App() {
 
@@ -37,7 +39,9 @@ function App() {
           <Route path="/catalogoadmin" element={<Catalogoadmin/>}/>
           <Route path="/removeadmin" element={<Removeadmin/>}/>
           <Route path="/editadmin" element={<Editadmin/>}/>
-          <Route path="/add-product" element={<AddProductPage />} />
+          <Route path="/add-product" element={<AddProductPage/>} />
+          <Route path="/camisetajapan3d" element={<CamisetaJapan3D/>} />
+          <Route path="/produtocamisetajapan" element={<ProdutoCamisetaJapan/>} />
         </Routes>
       </Router>
     </>

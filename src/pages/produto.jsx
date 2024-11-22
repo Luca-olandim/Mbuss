@@ -5,7 +5,8 @@ import '../css/produto.css'
 import logo from  '../images/logo.jpg'
 import Navbar from '../componentes/navbar';
 import SizeDropdown from '../componentes/dropdown';
-
+import CamisetaJapan from '../images/CamisetaJapan.png'
+import CamisetaGrito from '../images/CamisetaGrito.png'
 
 function Produto(){
     const [count, setCount] = useState(0);
@@ -28,15 +29,14 @@ function Produto(){
     <div className='produto-container'>
       <img
         className="img-produto"
-        src="https://s2-quem.glbimg.com/tO1_2p_vASEjMAOtd-DippLCN64=/0x0:1269x1269/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2022/1/y/Mz8UwoTiejCg9BJuhWmg/318770676-1864787700531022-3706966706225335508-n-1-.jpg"
-        alt="Second slide"
+        src= {CamisetaGrito}
       />
       <div className='descricao-produto' >
       <a id='link3d' href="/produto3d"><button id='button3d'>3D</button></a>
-        <p>CAMISETA BASIC SUPER OVERSIZED WHITE. Camiseta manga curta modelagem oversized,
-          confeccionada em tecido de algodão. Possui etiqueta na altura do peito.</p>
-        <p id='preco'>R$ 150,00</p>	
-        <div className='modificadores'> 		
+        <p>SCREAM MBUSS Black Tee é uma camiseta confeccionada com gola em ribana de 3cm, tem mangas e modelagem mais ampla com foco em um caimento perfeito ao corpo.
+        O material escolhido é um algodão de gramatura elevada que proporciona conforto e veste de forma fluída.</p>
+        <p id='preco'>R$ 189,90</p> 
+        <div className='modificadores'>     
           <select>
             <option value="P">P</option>
             <option value="M">M</option>

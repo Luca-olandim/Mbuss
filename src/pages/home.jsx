@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
 import '../App.css'
-import logo from '../images/logo.jpg';
 import Navbar from '../componentes/navbar';
 import CarroNoCeu from '../componentes/carousel';
 import ProdutoLanc from '../componentes/produtoLanc';
+import CamisetaJapan from '../componentes/CamisetaJapan'
 
 function Home() {
 
@@ -21,8 +19,7 @@ function Home() {
             </div>
             <div className='imgs-lancamentos p-8 flex flex-row justify-center flex-wrap gap-52'>
                 <ProdutoLanc/>
-                <ProdutoLanc/>
-                <ProdutoLanc/>
+                <CamisetaJapan/>
             </div>
         </>
     );

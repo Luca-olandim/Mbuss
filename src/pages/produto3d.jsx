@@ -2,10 +2,9 @@ import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/produto3d.css'
 import Navbar from '../componentes/navbar';
-import Camiseta from '../images/camiseta.png'
+import TShirt360Viewer from '../componentes/TShirt360Viewer';
 
 function Produto3d(){
-
     return(
         <>  
             <Navbar/>
@@ -13,7 +12,12 @@ function Produto3d(){
                 <a style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
             <div className='imagem3d'>
-            <img src={Camiseta} alt="" />
+            <TShirt360Viewer
+                imageCount={236}
+                imagePath="/src/images/camiseta1/"
+                width={600}
+                height={600}
+            />
             </div>
             <div className='voltar-botao'>
                <a href="/produto"><button>Voltar</button></a>
