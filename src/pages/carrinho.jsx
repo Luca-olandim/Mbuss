@@ -51,7 +51,7 @@ const Carrinho = () => {
     if (cupom === 'SENNA15') {
       const desconto = subtotal * 0.15; // 15% de desconto
       setDiscount(desconto);
-      alert(`Cupom aplicado!`);
+      setCupomMessage(`Cupom aplicado! Você ganhou R$${desconto.toFixed(2)} de desconto.`);
     } else {
       setDiscount(0);
       alert('Cupom inválido. Tente novamente.');

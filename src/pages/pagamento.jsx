@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../css/pagamento.css';
-import logo from  '../images/logo.jpg';
+import logo from '../images/logo.jpg';
 import Stepper from '../componentes/stepper';
+import '../App.css';
 
 function Pagamento() {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [valorTotal, setValorTotal] = useState("0.00");
+  const [inputsCartao, setCartao] = useState("");
 
   useEffect(() => {
     const total = localStorage.getItem('valorTotal');
@@ -60,6 +61,43 @@ function Pagamento() {
               />
               Cartão de Crédito
             </label>
+            <div>
+              {
+                paymentMethod === "Cartão de Crédito" ?
+                  (
+                    <>
+                      <div className='mt-2 mb-3'>
+                        <input
+                          type='text'
+                          name='numero cartao'
+                          placeholder='Nº do Cartão'>
+                        </input>
+                      </div>
+                      <div className='mb-3'>
+                        <input
+                          type='text'
+                          name='nome do titular'
+                          placeholder='Nome do Titular'>
+                        </input>
+                      </div>
+                      <div className='mb-3'>
+                        <input
+                          type='text'
+                          name='vencimento cartao'
+                          placeholder='Vencimento do Cartão'>
+                        </input>
+                      </div>
+                      <div className='mb-3'>
+                        <input
+                          type='text'
+                          name='nome do titular'
+                          placeholder='Código de Segurança'>
+                        </input>
+                      </div>
+            </>
+            ) : null
+          }
+          </div>
           </div>
         </div>
         <div className='mr-5'>
