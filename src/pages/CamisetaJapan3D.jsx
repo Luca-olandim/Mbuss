@@ -17,7 +17,7 @@ function CamisetaJapan3D(){
                 imagePath="/src/images/camiseta2/"
                 width={600}
                 height={600}
-                fileBaseName='black0013.png'
+                fileBaseName='black0001.png'
             />
             </div>
             <div className='voltar-botao'>
