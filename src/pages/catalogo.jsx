@@ -14,14 +14,10 @@ function Catalogo() {
         </a>
       </div>
       <div>
-        <button
-          className='filtrar-style border-none rounded-[20px] bg-black mt-14 ml-[13%] w-48 h-9 text-white'
-          type='submit'
-        >
-          Filtrar
-        </button>
       </div>
       <div className='imgs-lancamentos p-8 mt-10 flex flex-row justify-center flex-wrap gap-52'>
+        <ProdutoLanc />
+        <CamisetaJapan/>
         <ProdutoLanc />
         <CamisetaJapan/>
         <ProdutoLanc />

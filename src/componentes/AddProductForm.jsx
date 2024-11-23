@@ -52,7 +52,7 @@ const AddProductForm = ({ onSubmit }) => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container mt-32">
       <h1>Adicionar Produto</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -88,19 +88,19 @@ const AddProductForm = ({ onSubmit }) => {
           onChange={handleChange}
           required
         />
+        <input
+          type="text"
+          name="url"
+          placeholder="URL da imagem"
+          onChange={handleChange}
+          required
+        />
         {errors.quantidade && <p className="error-message">{errors.quantidade}</p>}
         <textarea
           name="descricao"
           placeholder="Descrição"
           value={formData.descricao}
           onChange={handleChange}
-          required
-        />
-        <input
-          type="file"
-          name="imagem"
-          accept="image/*"
-          onChange={handleFileChange}
           required
         />
         <button type="submit">Adicionar Produto</button>

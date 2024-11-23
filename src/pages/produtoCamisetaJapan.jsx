@@ -18,6 +18,7 @@ function ProdutoCamisetaJapan(){
   return (
     <>
     <Navbar/>
+    <div className='josefin-sans'>
     <div className='catalogo'>
                 <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
@@ -45,6 +46,7 @@ O material escolhido é um algodão de gramatura elevada que proporciona confort
         </div> 
         <button className="comprar">Comprar</button>
       </div>   
+    </div>
     </div>
     </>
     );

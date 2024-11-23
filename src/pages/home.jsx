@@ -20,6 +20,8 @@ function Home() {
             <div className='imgs-lancamentos p-8 flex flex-row justify-center flex-wrap gap-52'>
                 <ProdutoLanc/>
                 <CamisetaJapan/>
+                <ProdutoLanc/>
+                <CamisetaJapan/>
             </div>
         </>
     );

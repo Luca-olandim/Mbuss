@@ -14,7 +14,7 @@ function CamisetaJapan({ isFavorito = false }) { // Set default isFavorito to fa
 
   return (
     <>
-      <div className='w-[22%] relative'>
+      <div className='w-[15%] relative'>
         <a href="/produto"><img
           className="d-block w-full    bg-gray-300"
           src= {CamisetaGrito}

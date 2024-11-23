@@ -23,6 +23,7 @@ function Produto(){
   return (
     <>
     <Navbar/>
+    <div className='josefin-sans'>
     <div className='catalogo'>
                 <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
@@ -50,6 +51,7 @@ function Produto(){
         </div> 
         <button className="comprar">Comprar</button>
       </div>   
+    </div>
     </div>
     </>
     );

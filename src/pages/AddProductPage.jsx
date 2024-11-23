@@ -22,7 +22,6 @@ const AddProductPage = () => {
 
   return (
     <div>
-      <h1>Adicionar Novo Produto</h1>
       <AddProductForm onSubmit={handleFormSubmit} />
     </div>
   );

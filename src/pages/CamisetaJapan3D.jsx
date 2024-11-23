@@ -20,7 +20,7 @@ function CamisetaJapan3D(){
                 fileBaseName='black0001.png'
             />
             </div>
-            <div className='voltar-botao'>
+            <div className='voltar-botao josefin-sans'>
                <a href="/produtocamisetajapan"><button>Voltar</button></a>
             </div>
             <br />

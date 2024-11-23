@@ -19,7 +19,7 @@ function Produto3d(){
                 height={600}
             />
             </div>
-            <div className='voltar-botao'>
+            <div className='voltar-botao josefin-sans'>
                <a href="/produto"><button>Voltar</button></a>
             </div>
             <br />
