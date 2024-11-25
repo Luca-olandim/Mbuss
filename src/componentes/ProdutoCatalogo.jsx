@@ -5,11 +5,10 @@ import coracao from '../images/coracao.svg'; // Caminho para o ícone
 
 function ProdutoCatalogo() {
   const [produtos, setProdutos] = useState([]);
-  const [favoritos, setFavoritos] = useState([]);  // Adiciona o estado para os favoritos
+  const [favoritos, setFavoritos] = useState([]);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Carregar produtos
     async function fetchProdutos() {
       try {
         const response = await axios.get('http://localhost:3333/produtos');
@@ -22,35 +21,51 @@ function ProdutoCatalogo() {
 
     fetchProdutos();
 
-    // Carregar favoritos do localStorage
     const favoritosSalvos = JSON.parse(localStorage.getItem('favoritos')) || [];
     setFavoritos(favoritosSalvos);
   }, []);
 
   const handleAddToFavorites = (produto) => {
-    // Adiciona o produto aos favoritos
     setFavoritos((prevFavoritos) => {
       const novosFavoritos = [...prevFavoritos, produto];
-      localStorage.setItem('favoritos', JSON.stringify(novosFavoritos)),alert('Produto adicionado aos favoritos com sucesso!'); // Salva no localStorage
+      localStorage.setItem('favoritos', JSON.stringify(novosFavoritos));
+      alert('Produto adicionado aos favoritos com sucesso!');
       return novosFavoritos;
-
-
     });
   };
-return (
-    <div className="produto-catalogo gap-40">
+
+  const handleAddToCart = async (produto) => {
+    try {
+      const carrinhoAtual = JSON.parse(localStorage.getItem('carrinho')) || [];
+      const novoCarrinho = [...carrinhoAtual, produto];
+      localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
+      alert('Produto adicionado ao carrinho com sucesso!');
+    } catch (error) {
+      console.error('Erro ao adicionar ao carrinho:', error);
+      alert('Erro ao adicionar ao carrinho.');
+    }
+  };
+
+  return (
+    <div className="produto-catalogo">
       {error && <p>{error}</p>}
       {produtos.map((produto) => (
         <div key={produto.id_produto} className="produto-item">
           <div 
             className="favorito-icon" 
-            onClick={() => handleAddToFavorites(produto)}>
+            onClick={() => handleAddToFavorites(produto)}
+          >
             <img src={coracao} alt="Adicionar aos Favoritos" />
           </div>
           <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
           <h3>{produto.nome}</h3>
           <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
-          <button className="botao" type="submit">Adicionar ao Carrinho</button>
+          <button 
+            onClick={() => handleAddToCart(produto)} 
+            className="botao"
+          >
+            Adicionar ao Carrinho
+          </button>
         </div>
       ))}
     </div>
