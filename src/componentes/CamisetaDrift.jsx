@@ -42,7 +42,6 @@ function CamisetaDrift({ isFavorito = false }) {
       </a>
 
       <h3>SCREAM MBUSS BLACK TEE</h3>
-      <p>Camisa preta com estampa SCREAM MBUSS</p>
       <p><strong>R$ 189,90</strong></p>
 
       <button className="botao" type="submit">Adicionar ao Carrinho</button>

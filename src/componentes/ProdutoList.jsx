@@ -147,7 +147,6 @@ function ProdutoList() {
                   className="produto-imagem"
                 />
                 <h3>{produto.nome}</h3>
-                <p>Descrição: {produto.descricao}</p>
                 <p>Valor: R$ {produto.valor}</p>
                 <div className="actions">
                   <button onClick={() => setEditingProduto(produto)} className="botao">Editar</button>

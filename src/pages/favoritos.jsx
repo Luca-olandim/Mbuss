@@ -35,7 +35,6 @@ function Favoritos() {
           <div key={produto.id_produto} className="produto-item">
             <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
             <h3>{produto.nome}</h3>
-            <p>{produto.descricao}</p>
             <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
             {/* Botão de remoção */}
             <button 

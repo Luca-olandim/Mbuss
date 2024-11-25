@@ -15,7 +15,6 @@ function Catalogo() {
       </div>
       <div className='imgs-lancamentos p-8 mt-10 flex flex-row justify-center flex-wrap gap-52'>
         <ProdutoCatalogo/>
-        <CamisetaDrift/>
       </div>
     </>
   );

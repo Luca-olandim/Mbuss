@@ -38,24 +38,19 @@ function ProdutoCatalogo() {
     });
   };
 return (
-    <div className="produto-catalogo">
+    <div className="produto-catalogo gap-40">
       {error && <p>{error}</p>}
       {produtos.map((produto) => (
         <div key={produto.id_produto} className="produto-item">
           <div 
             className="favorito-icon" 
-            onClick={() => handleAddToFavorites(produto)}
-
-          >
+            onClick={() => handleAddToFavorites(produto)}>
             <img src={coracao} alt="Adicionar aos Favoritos" />
           </div>
-
           <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
-
           <h3>{produto.nome}</h3>
-          <p>{produto.descricao}</p>
-
           <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
+          <button className="botao" type="submit">Adicionar ao Carrinho</button>
         </div>
       ))}
     </div>
