@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../css/catalogo.css';
 import coracao from '../images/coracao.svg'; // Caminho para o ícone
@@ -7,6 +8,7 @@ function ProdutoCatalogo() {
   const [produtos, setProdutos] = useState([]);
   const [favoritos, setFavoritos] = useState([]);
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Hook para navegação
 
   useEffect(() => {
     async function fetchProdutos() {
@@ -46,6 +48,10 @@ function ProdutoCatalogo() {
     }
   };
 
+  const handleNavigateToProduto = (idProduto) => {
+    navigate(`/produto/${idProduto}`); // Navega para a página de detalhes do produto
+  };
+
   return (
     <div className="produto-catalogo">
       {error && <p>{error}</p>}
@@ -57,8 +63,19 @@ function ProdutoCatalogo() {
           >
             <img src={coracao} alt="Adicionar aos Favoritos" />
           </div>
-          <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
-          <h3>{produto.nome}</h3>
+          <img 
+            src={produto.imagem} 
+            alt={produto.nome} 
+            className="produto-imagem" 
+            onClick={() => handleNavigateToProduto(produto.id_produto)} // Navega ao clicar na imagem
+            style={{ cursor: 'pointer' }}
+          />
+          <h3
+            onClick={() => handleNavigateToProduto(produto.id_produto)} // Navega ao clicar no nome
+            style={{ cursor: 'pointer' }}
+          >
+            {produto.nome}
+          </h3>
           <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
           <button 
             onClick={() => handleAddToCart(produto)} 

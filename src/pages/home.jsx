@@ -7,6 +7,7 @@ import CamisetaJapan from '../componentes/CamisetaJapan';
 import CamisetaDrift from '../componentes/CamisetaDrift';
 import CamisetaVermelha from '../componentes/CamisetaVermelha';
 import ProdutoCatalogo from '../componentes/ProdutoCatalogo';
+import ProdutoList from '../componentes/ProdutoList';
 
 function Home() {
 

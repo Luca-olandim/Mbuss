@@ -19,6 +19,7 @@ import ProdutoVermelha3D from "./pages/CamisetaVermelha3D.jsx"
 import ProdutoVermelha from "./pages/produtoVermelha";
 import ProdutoCamisetaDrift from "./pages/produtoDrift.jsx";
 import ProdutoDrift3D from "./pages/CamisetaDrift3D.jsx";
+import VisualizarProduto from "./pages/visualizarProduto.jsx"
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/produtocamisetajapan" element={<ProdutoCamisetaJapan/>} />
           <Route path="/produtocamisetavermelha" element={<ProdutoVermelha/>} />
           <Route path="/produtocamisetadrift" element={<ProdutoCamisetaDrift/>} />
+          <Route path="/vizualizacaoproduto" element={<VisualizarProduto/>} />
         </Routes>
       </Router>
     </>
