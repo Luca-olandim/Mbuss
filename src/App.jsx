@@ -12,13 +12,13 @@ import Catalogo from "./pages/catalogo";
 import Pagamento from "./pages/pagamento";
 import Confirmacaopag from "./pages/confirmacaopag";
 import Produto3d from "./pages/produto3d";
-import Catalogoadmin from "./pages/catalogoadmin";
-import Removeadmin from "./pages/removeadmin";
-import Editadmin from "./pages/editadmin";
 import CamisetaJapan3D from "./pages/CamisetaJapan3D";
 import ProdutoCamisetaJapan from "./pages/produtoCamisetaJapan";
 import ProdutosAdmin from "./pages/ProdutosAdmin.jsx";
-
+import ProdutoVermelha3D from "./pages/CamisetaVermelha3D.jsx"
+import ProdutoVermelha from "./pages/produtoVermelha";
+import ProdutoCamisetaDrift from "./pages/produtoDrift.jsx";
+import ProdutoDrift3D from "./pages/CamisetaDrift3D.jsx";
 
 function App() {
 
@@ -37,12 +37,13 @@ function App() {
           <Route path="/pagamento" element={<Pagamento/>}/>
           <Route path="/confirmacaopag" element={<Confirmacaopag/>}/>
           <Route path="/produto3d" element={<Produto3d/>}/>
-          <Route path="/catalogoadmin" element={<Catalogoadmin/>}/>
-          <Route path="/removeadmin" element={<Removeadmin/>}/>
-          <Route path="/editadmin" element={<Editadmin/>}/>
           <Route path="/produtosadmin" element={<ProdutosAdmin/>} />
           <Route path="/camisetajapan3d" element={<CamisetaJapan3D/>} />
+          <Route path="/camisetavermelha3d" element={<ProdutoVermelha3D/>} />
+          <Route path="/camisetadrift3d" element={<ProdutoDrift3D/>} />
           <Route path="/produtocamisetajapan" element={<ProdutoCamisetaJapan/>} />
+          <Route path="/produtocamisetavermelha" element={<ProdutoVermelha/>} />
+          <Route path="/produtocamisetadrift" element={<ProdutoCamisetaDrift/>} />
         </Routes>
       </Router>
     </>

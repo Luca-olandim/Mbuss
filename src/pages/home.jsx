@@ -3,7 +3,9 @@ import '../App.css'
 import Navbar from '../componentes/navbar';
 import CarroNoCeu from '../componentes/carousel';
 import ProdutoLanc from '../componentes/produtoLanc';
-import CamisetaJapan from '../componentes/CamisetaJapan'
+import CamisetaJapan from '../componentes/CamisetaJapan';
+import CamisetaDrift from '../componentes/CamisetaDrift';
+import CamisetaVermelha from '../componentes/CamisetaVermelha';
 
 function Home() {
 
@@ -20,8 +22,8 @@ function Home() {
             <div className='imgs-lancamentos p-8 flex flex-row justify-center flex-wrap gap-52'>
                 <ProdutoLanc/>
                 <CamisetaJapan/>
-                <ProdutoLanc/>
-                <CamisetaJapan/>
+                <CamisetaVermelha/>
+                <CamisetaDrift/>
             </div>
         </>
     );

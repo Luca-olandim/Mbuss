@@ -41,17 +41,6 @@ function CarroNoCeu() {
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
-
-       {/* Terceiro banner */}
-       <Carousel.Item>
-        <img
-          className="d-block w-100 h-[550px] bg-gray-300"
-          src={banner4}
-          alt="Terceiro slide"
-        />
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
     </Carousel>
   );
 }

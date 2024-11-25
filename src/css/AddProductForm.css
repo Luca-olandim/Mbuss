@@ -1,74 +1,94 @@
-/* AddProductForm.css */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Archivo+Black&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BioRhyme:wght@200..800&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Archivo+Black&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BioRhyme:wght@200..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
 
-.form-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  margin-top: 3vh;
-  margin-bottom: 10vh;
+.produto-form-container {
   display: flex;
   flex-direction: column;
-  }
-  
-  .form-container h1 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .form-container input,
-  .form-container textarea,
-  .form-container button {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-container input:focus,
-  .form-container textarea:focus,
-  .form-container button:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  .form-container textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .form-container button {
-    background-color: #000000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-container button:hover {
-    background-color: #3c3f42;
-  }
-  
-  .form-container input[type='file'] {
-    padding: 5px;
-  }
-  
-  .form-container .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-  }
-  
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.produto-form-logo img {
+  width: 250px;
+  height: auto;
+}
+
+.produto-form-box {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.produto-form-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.produto-form-box input,
+.produto-form-box textarea,
+.produto-form-box select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  color: #333333;
+  outline: none;
+  appearance: none; /* Remove a aparência padrão do navegador */
+}
+
+.produto-form-box textarea {
+  resize: none;
+  height: 100px;
+}
+
+.produto-form-box select {
+  cursor: pointer;
+}
+
+.produto-form-box select option {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.produto-form-box button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produto-form-box button:hover {
+  background-color: #444444;
+}
+
+.produto-form-box p {
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+

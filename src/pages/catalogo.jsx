@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import Navbar from '../componentes/navbar';
-import ProdutoLanc from '../componentes/produtoLanc';
-import CamisetaJapan from '../componentes/CamisetaJapan' ;
+import ProdutoCatalogo from '../componentes/ProdutoCatalogo';
+import CamisetaDrift from '../componentes/CamisetaDrift';
 
 function Catalogo() {
   return (
@@ -13,17 +13,9 @@ function Catalogo() {
           Catálogo
         </a>
       </div>
-      <div>
-      </div>
       <div className='imgs-lancamentos p-8 mt-10 flex flex-row justify-center flex-wrap gap-52'>
-        <ProdutoLanc />
-        <CamisetaJapan/>
-        <ProdutoLanc />
-        <CamisetaJapan/>
-        <ProdutoLanc />
-        <CamisetaJapan/>
-        <ProdutoLanc />
-        <CamisetaJapan/>
+        <ProdutoCatalogo/>
+        <CamisetaDrift/>
       </div>
     </>
   );

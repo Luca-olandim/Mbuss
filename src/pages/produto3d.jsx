@@ -9,7 +9,7 @@ function Produto3d(){
         <>  
             <Navbar/>
             <div className='catalogo'>
-                <a style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
+                <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
             <div className='imagem3d'>
             <TShirt360Viewer

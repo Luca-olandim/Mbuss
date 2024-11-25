@@ -5,10 +5,17 @@ import { useNavigate } from 'react-router-dom';
 
 function Conta() {
     const [userInfo, setUserInfo] = useState({});
+    const [isAdmin, setIsAdmin] = useState(false); // Estado para controlar se é admin
     const navigate = useNavigate();
 
     useEffect(() => {
         const correto = localStorage.getItem('dados usuario');
+        const adminStatus = localStorage.getItem("é adm?"); // Verifica se o usuário é admin no localStorage
+        
+        // Verifica se o status de admin está salvo e é verdadeiro
+        if (adminStatus === "true") {
+            setIsAdmin(true); // Se for admin, define isAdmin como true
+        }
         
         // Check if the data exists and is not null
         if (correto) {
@@ -31,6 +38,10 @@ function Conta() {
         navigate('/login');
     };
 
+    const goToAdminPage = () => {
+        navigate('/produtosadmin'); // Redireciona para a página de administração
+    };
+
     return (
         <>
             <Navbar />
@@ -46,6 +57,17 @@ function Conta() {
                     <p className='ml-2'>Email: {userInfo.email}</p>
                 </div>
             </div>
+            {/* Exibe o botão de administração somente se for admin */}
+            {isAdmin && (
+                <div className='flex justify-center items-center mt-5'>
+                    <button
+                        className='text-white bg-blue-700 w-40 h-10 rounded-[20px] font-bold'
+                        onClick={goToAdminPage}
+                    >
+                        Acessar Admin
+                    </button>
+                </div>
+            )}
             <div className='flex justify-center items-center mt-5'>
                 <button className='text-white bg-red-700 w-20 h-10 rounded-[20px] josefin-sans font-bold' onClick={sairConta}>Sair</button>
             </div>

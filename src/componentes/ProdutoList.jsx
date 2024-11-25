@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../App.css';
-import logo from '../images/logo.jpg';
+import '../css/ProdutoList.css';
 
 function ProdutoList() {
   const [produtos, setProdutos] = useState([]);
-  const [editingProduto, setEditingProduto] = useState(null);  // Armazenar o produto sendo editado
+  const [editingProduto, setEditingProduto] = useState(null);
   const [error, setError] = useState('');
 
   // Carregar produtos da API
@@ -27,14 +26,25 @@ function ProdutoList() {
   const handleUpdateProduto = async (produtoId) => {
     try {
       await axios.put(`http://localhost:3333/produtos/${produtoId}`, editingProduto);
-      setProdutos(produtos.map((produto) => 
+      setProdutos(produtos.map((produto) =>
         produto.id_produto === produtoId ? editingProduto : produto
       ));
       setEditingProduto(null);  // Fechar o formulário de edição
-      alert('Produto atualizado com sucesso!');
     } catch (error) {
       console.error('Erro ao atualizar produto:', error);
       alert('Erro ao atualizar produto.');
+    }
+  };
+
+  // Adicionar um novo produto (exemplo de função)
+  const handleAddProduto = async (novoProduto) => {
+    try {
+      const response = await axios.post('http://localhost:3333/produtos', novoProduto);
+      // Adiciona o novo produto ao estado sem precisar recarregar
+      setProdutos(prevProdutos => [...prevProdutos, response.data]);
+    } catch (error) {
+      console.error('Erro ao adicionar produto:', error);
+      alert('Erro ao adicionar produto.');
     }
   };
 
@@ -48,7 +58,6 @@ function ProdutoList() {
     try {
       await axios.delete(`http://localhost:3333/produtos/${produtoId}`);
       setProdutos(produtos.filter(produto => produto.id_produto !== produtoId));
-      alert('Produto excluído com sucesso!');
     } catch (error) {
       console.error('Erro ao excluir produto:', error);
       alert('Erro ao excluir produto.');
@@ -63,12 +72,10 @@ function ProdutoList() {
       [name]: value,
     }));
   };
+
   return (
     <div className="produto-list">
-      <div className="img-logo pt-2">
-        <a href="/"><img src={logo} className="w-[250px] h-auto m-auto" alt="Logo" /></a>
-      </div>
-      <h1 className="text-2xl mb-4">Lista de Produtos</h1>
+      <h1 className="text-2xl mb-4 text-black">Lista de Produtos</h1>
       {error && <p>{error}</p>}
       <div className="produtos-container">
         {produtos.map((produto) => (
@@ -134,10 +141,14 @@ function ProdutoList() {
             ) : (
               // Exibição normal do produto
               <div>
-                <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
+                <img
+                  src={produto.imagem || 'https://via.placeholder.com/300'}
+                  alt={produto.nome}
+                  className="produto-imagem"
+                />
                 <h3>{produto.nome}</h3>
-                <p>{produto.descricao}</p>
-                <p>R$ {produto.valor}</p>
+                <p>Descrição: {produto.descricao}</p>
+                <p>Valor: R$ {produto.valor}</p>
                 <div className="actions">
                   <button onClick={() => setEditingProduto(produto)} className="botao">Editar</button>
                   <button onClick={() => handleDeleteProduto(produto.id_produto)} className="botao">Excluir</button>

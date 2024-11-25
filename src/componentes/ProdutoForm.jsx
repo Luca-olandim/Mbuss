@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import logo from '../images/logo.jpg';
+import '../css/AddProductForm.css';
 
 function ProdutoForm() {
   const navigate = useNavigate();
@@ -25,7 +27,6 @@ function ProdutoForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      // Enviar o produto para o backend
       await axios.post('http://localhost:3333/produtos', produto);
       setProduto({
         nome: '',
@@ -35,7 +36,7 @@ function ProdutoForm() {
         descricao: '',
         imagem: ''
       });
-      navigate('/produtosadmin'); // Redireciona para a página de produtos (ou onde achar adequado)
+      navigate('/produtosadmin');
     } catch (error) {
       setError('Erro ao salvar produto. Tente novamente.');
       console.error('Erro ao salvar produto:', error);
@@ -43,10 +44,13 @@ function ProdutoForm() {
   };
 
   return (
-    <div>
-      <h1>Criar Produto</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="produto-form-container">
+      <div className="produto-form-logo">
+        <a href="/"><img src={logo} alt="Logo" /></a>
+      </div>
+      <div className="produto-form-box">
+        <h1 className='text-black-600'>Criar Produto</h1>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="nome"
@@ -55,18 +59,19 @@ function ProdutoForm() {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="tamanho"
-            placeholder="Tamanho"
-            value={produto.tamanho}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div>
+              <select
+                name="tamanho"
+                value={produto.tamanho}
+                onChange={handleInputChange}
+                required>
+                <option value="" disabled>
+                  Selecione o tamanho
+                </option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+              </select>
           <input
             type="number"
             name="valor"
@@ -75,8 +80,6 @@ function ProdutoForm() {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div>
           <input
             type="number"
             name="quantidade"
@@ -85,8 +88,6 @@ function ProdutoForm() {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div>
           <textarea
             name="descricao"
             placeholder="Descrição"
@@ -94,8 +95,6 @@ function ProdutoForm() {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div>
           <input
             type="text"
             name="imagem"
@@ -104,10 +103,10 @@ function ProdutoForm() {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <button type="submit">Salvar Produto</button>
-      </form>
-      {error && <p>{error}</p>}
+          <button type="submit">Salvar Produto</button>
+        </form>
+        {error && <p>{error}</p>}
+      </div>
     </div>
   );
 }

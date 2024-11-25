@@ -21,6 +21,7 @@
   /* Description text styling */
   .descricao-produto p {
     margin-bottom: 8px;
+    text-align: justify;
   }
   
   /* Preço styling */
