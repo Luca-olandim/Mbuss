@@ -45,7 +45,7 @@ function ProdutoForm() {
 
   return (
     <div className="produto-form-container">
-      <div className="produto-form-logo">
+      <div className="produto-form-logo mt-24">
         <a href="/"><img src={logo} alt="Logo" /></a>
       </div>
       <div className="produto-form-box">
