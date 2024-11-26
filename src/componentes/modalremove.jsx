@@ -3,7 +3,7 @@ import '../css/modalremove.css';
 
 function ModalRemove({ isVisible, onClose }) {
   if (!isVisible) {
-    return null; // Não renderiza o modal se não estiver visível
+    return null;
   }
 
   return (

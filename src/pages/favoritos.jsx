@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/catalogo.css';  // Importando o CSS para a página de favoritos
+import '../css/catalogo.css';
 import Navbar from '../componentes/navbar';
 
 
@@ -13,10 +13,7 @@ function Favoritos() {
   }, []);
 
   const handleRemoveFavorite = (produtoId) => {
-    // Filtra o produto a ser removido
     const novosFavoritos = favoritos.filter((produto) => produto.id_produto !== produtoId);
-
-    // Atualiza o estado e o localStorage
     setFavoritos(novosFavoritos);
     localStorage.setItem('favoritos', JSON.stringify(novosFavoritos)); 
   };
@@ -24,7 +21,7 @@ function Favoritos() {
   return (
     <>
     <Navbar/>
-    <div className='catalogo'>
+    <div className='catalogo gap-40'>
                 <a href="/catalogo" style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', textDecoration: 'none' }}>Catálogo</a>
             </div>
     <div className="produto-catalogo">
@@ -36,7 +33,6 @@ function Favoritos() {
             <img src={produto.imagem} alt={produto.nome} className="produto-imagem" />
             <h3>{produto.nome}</h3>
             <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
-            {/* Botão de remoção */}
             <button 
               onClick={() => handleRemoveFavorite(produto.id_produto)} 
               className="botao"

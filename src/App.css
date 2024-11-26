@@ -286,7 +286,7 @@ a:hover {
       text-align: center;
       background-color: black;
       padding: 10px 0;
-      margin: 0; /* Remove espaçamentos extras */
+      margin: 0;
     }
 }
 
@@ -337,11 +337,11 @@ a:hover {
 .step2,
 .step3 {
   flex: 1;
-  padding: 8px 82px; /* Ajusta o padding conforme necessário */
+  padding: 8px 82px; 
   text-align: center;
   color: white;
   position: relative;
-  font-size: 1.2em; /* Mantém o tamanho da fonte */
+  font-size: 1.2em;
   margin-top: 1%;
 }
 .step2::after {
@@ -350,14 +350,14 @@ a:hover {
 
   
   .favorite-icon-container {
-    background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
-    border-radius: 50%; /* Tornar o fundo redondo */
-    padding: 5px; /* Espaço entre o ícone e a borda do círculo */
+    background-color: rgb(117, 117, 117);
+    border-radius: 50%;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Largura do círculo */
-    height: 60px; /* Altura do círculo */
+    width: 60px;
+    height: 60px;
 }
 .favorite-icon {
   width: 32px;  
@@ -365,14 +365,14 @@ a:hover {
 }
 
 .image-container {
-  position: relative; /* Container para a imagem e o ícone */
+  position: relative;
 }
 
 .favorite-icon-container {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1; /* Ajuste conforme necessário */
+  z-index: 1;
 }
 
 
@@ -389,14 +389,14 @@ a:hover {
 }
 
 .remove-icon-container {
-    background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
-    border-radius: 50%; /* Tornar o fundo redondo */
-    padding: 5px; /* Espaço entre o ícone e a borda do círculo */
+    background-color: rgb(117, 117, 117);
+    border-radius: 50%;
+    padding: 5px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Largura do círculo */
-    height: 60px; /* Altura do círculo */
+    width: 60px;
+    height: 60px;
 }
 .remove-icon {
   width: 32px;  
@@ -407,17 +407,17 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1; /* Ajuste conforme necessário */
+  z-index: 1;
 }
 .edit-icon-container {
-    background-color: rgb(117, 117, 117); /* Círculo preto ao redor do ícone */
-    border-radius: 50%; /* Tornar o fundo redondo */
-    padding: 5px; /* Espaço entre o ícone e a borda do círculo */
+    background-color: rgb(117, 117, 117);
+    border-radius: 50%;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Largura do círculo */
-    height: 60px; /* Altura do círculo */
+    width: 60px;
+    height: 60px;
 }
 .edit-icon {
   width: 32px;  
@@ -428,7 +428,7 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1; /* Ajuste conforme necessário */
+  z-index: 1;
 }
 
 #alinkbutton{

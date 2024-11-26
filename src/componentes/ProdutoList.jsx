@@ -7,7 +7,6 @@ function ProdutoList() {
   const [editingProduto, setEditingProduto] = useState(null);
   const [error, setError] = useState('');
 
-  // Carregar produtos da API
   useEffect(() => {
     async function fetchProdutos() {
       try {
@@ -22,38 +21,33 @@ function ProdutoList() {
     fetchProdutos();
   }, []);
 
-  // Atualizar produto
   const handleUpdateProduto = async (produtoId) => {
     try {
       await axios.put(`http://localhost:3333/produtos/${produtoId}`, editingProduto);
       setProdutos(produtos.map((produto) =>
         produto.id_produto === produtoId ? editingProduto : produto
       ));
-      setEditingProduto(null);  // Fechar o formulário de edição
+      setEditingProduto(null);
     } catch (error) {
       console.error('Erro ao atualizar produto:', error);
       alert('Erro ao atualizar produto.');
     }
   };
 
-  // Adicionar um novo produto (exemplo de função)
   const handleAddProduto = async (novoProduto) => {
     try {
       const response = await axios.post('http://localhost:3333/produtos', novoProduto);
-      // Adiciona o novo produto ao estado sem precisar recarregar
       setProdutos(prevProdutos => [...prevProdutos, response.data]);
     } catch (error) {
       console.error('Erro ao adicionar produto:', error);
       alert('Erro ao adicionar produto.');
     }
   };
-
-  // Cancelar edição
+  
   const handleCancelEdit = () => {
-    setEditingProduto(null);  // Fechar o formulário de edição
+    setEditingProduto(null);
   };
 
-  // Excluir produto
   const handleDeleteProduto = async (produtoId) => {
     try {
       await axios.delete(`http://localhost:3333/produtos/${produtoId}`);
@@ -64,7 +58,6 @@ function ProdutoList() {
     }
   };
 
-  // Manipulador de mudanças nos inputs de edição
   const handleEditChange = (event) => {
     const { name, value } = event.target;
     setEditingProduto((prevProduto) => ({
@@ -81,7 +74,6 @@ function ProdutoList() {
         {produtos.map((produto) => (
           <div key={produto.id_produto} className="produto-item">
             {editingProduto && editingProduto.id_produto === produto.id_produto ? (
-              // Exibição do formulário de edição inline
               <div className="edit-form">
                 <input
                   type="text"

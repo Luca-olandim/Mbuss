@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import deleteicon from '../images/delete.png';
-import ModalRemove from '../componentes/modalremove'; // Importando o componente ModalRemove
+import ModalRemove from '../componentes/modalremove'; 
 
 function ProdutoRemove() {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleRemoveClick = () => {
     console.log('Ícone de remover clicado');
-    setIsModalVisible(true); // Muda o estado para exibir o modal
+    setIsModalVisible(true); 
   };
 
   const closeModal = () => {
     console.log('Modal fechado');
-    setIsModalVisible(false); // Fecha o modal
+    setIsModalVisible(false);
   };
 
-  // UseEffect para verificar o valor de isModalVisible após a renderização
   useEffect(() => {
     console.log('Modal visível:', isModalVisible);
   }, [isModalVisible]);
@@ -30,7 +29,6 @@ function ProdutoRemove() {
           alt="Produto"
         />
 
-        {/* Ícone de remoção */}
         <div
           className="remove-icon-container absolute top-2 right-2 cursor-pointer"
           onClick={handleRemoveClick}
@@ -50,7 +48,6 @@ function ProdutoRemove() {
         </div>
       </div>
 
-      {/* Renderização condicional do Modal */}
       {isModalVisible && (
         <ModalRemove isVisible={isModalVisible} onClose={closeModal} />
       )}

@@ -57,7 +57,6 @@ function Conta() {
                     <p className='ml-2'>Email: {userInfo.email}</p>
                 </div>
             </div>
-            {/* Exibe o botão de administração somente se for admin */}
             {isAdmin && (
                 <div className='flex justify-center items-center mt-5'>
                     <button

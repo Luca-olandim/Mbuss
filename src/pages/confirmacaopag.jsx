@@ -10,7 +10,7 @@ function Confirmacaopag() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/'); 
-   }, 2500); // 2,5 segundos
+   }, 2500);
 
    return () => clearTimeout(timer); 
  }, [navigate]);

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../css/catalogo.css';
-import coracao from '../images/coracao.svg'; // Caminho para o ícone
+import coracao from '../images/coracao.svg';
 
 function ProdutoCatalogo() {
   const [produtos, setProdutos] = useState([]);
   const [favoritos, setFavoritos] = useState([]);
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Hook para navegação
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchProdutos() {
@@ -49,44 +49,37 @@ function ProdutoCatalogo() {
   };
 
   const handleNavigateToProduto = (idProduto) => {
-    navigate(`/produto/${idProduto}`); // Navega para a página de detalhes do produto
+    navigate(`/produto/${idProduto}`);
   };
 
   return (
-    <div className="produto-catalogo">
+    <div className="produto-catalogo gap-40">
       {error && <p>{error}</p>}
       {produtos.map((produto) => (
         <div key={produto.id_produto} className="produto-item">
-          <div 
-            className="favorito-icon" 
-            onClick={() => handleAddToFavorites(produto)}
-          >
+          <div className="favorito-icon" onClick={() => handleAddToFavorites(produto)}>
             <img src={coracao} alt="Adicionar aos Favoritos" />
           </div>
-          <img 
-            src={produto.imagem} 
-            alt={produto.nome} 
-            className="produto-imagem" 
-            onClick={() => handleNavigateToProduto(produto.id_produto)} // Navega ao clicar na imagem
+          <img
+            src={produto.imagem}
+            alt={produto.nome}
+            className="produto-imagem"
             style={{ cursor: 'pointer' }}
           />
           <h3
-            onClick={() => handleNavigateToProduto(produto.id_produto)} // Navega ao clicar no nome
             style={{ cursor: 'pointer' }}
           >
             {produto.nome}
           </h3>
           <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
-          <button 
-            onClick={() => handleAddToCart(produto)} 
-            className="botao"
-          >
+          <button onClick={() => handleAddToCart(produto)} className="botao">
             Adicionar ao Carrinho
           </button>
         </div>
       ))}
     </div>
   );
+  
 }
 
 export default ProdutoCatalogo;

@@ -5,7 +5,6 @@
     margin: 32px 0;
   }
   
-  /* Image styling */
   .img-produto {
     width: 300px;
     height: 300px;
@@ -13,18 +12,15 @@
     margin-right: 32px;
   }
   
-  /* Descrição container styling */
   .descricao-produto {
     width: 300px;
   }
   
-  /* Description text styling */
   .descricao-produto p {
     margin-bottom: 8px;
     text-align: justify;
   }
   
-  /* Preço styling */
   #preco {
     font-weight: bold;
   }
@@ -32,8 +28,8 @@
   .modificadores {
     display: flex;
     align-items: center;
-    justify-content: 10px; /* Justifica o espaço entre o dropdown e os botões */
-    margin-top: 10px; /* Espaço entre a descrição e os modificadores */
+    justify-content: 10px;
+    margin-top: 10px;
   }
   
   .modificadores > div {
@@ -87,17 +83,17 @@
   }
 
   #dropdownsizes{
-    appearance: none; /* Remove a seta padrão do dropdown */
-    -webkit-appearance: none; /* Compatibilidade com Safari */
-    -moz-appearance: none; /* Compatibilidade com Firefox */
-    background-color: #e0e0e0; /* Cor de fundo */
-    border: none; /* Remove borda padrão */
-    border-radius: 20px; /* Borda arredondada */
-    padding: 10px 30px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #000000; /* Cor do texto */
-    cursor: pointer; /* Cursor para indicar clicável */
-    position: relative; /* Para a seta personalizada */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
   }
 
 #button3d{

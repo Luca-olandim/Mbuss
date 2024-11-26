@@ -1,53 +1,56 @@
-import React, { useState } from 'react';
-import '../css/catalogo.css'; // Atualize o caminho para o CSS, se necessário
-import heartEmpty from '../images/heart-empty.png';
-import heartFilled from '../images/heart-filled.png';
+import React, { useState, useEffect } from 'react';
+import '../css/catalogo.css';
+import { useNavigate } from 'react-router-dom';
+import coracao from '../images/coracao.svg';
 import CamisetaJapan from '../images/CamisetaJapan.png';
 
-function ProdutoLanc({ isFavorito = false }) {
-  const [isFavorited, setIsFavorited] = useState(isFavorito);
+function ProdutoLanc() {
+  const [favoritos, setFavoritos] = useState([]);
+  const navigate = useNavigate();
 
-  const handleFavoriteClick = () => {
-    setIsFavorited(!isFavorited);
+  useEffect(() => {
     const favoritosSalvos = JSON.parse(localStorage.getItem('favoritos')) || [];
-    if (!favoritosSalvos.some(produto => produto.nome === 'URBAN NIGHTLIFE BLACK TEE')) {
-      favoritosSalvos.push({
-        nome: 'URBAN NIGHTLIFE BLACK TEE',
-        imagem: CamisetaJapan,
-        valor: 189.90,
-      });
-      localStorage.setItem('favoritos', JSON.stringify(favoritosSalvos));
-      alert('Produto adicionado aos favoritos com sucesso!');
+    setFavoritos(favoritosSalvos);
+  }, []);
+
+  const handleAddToFavorites = (produto) => {
+    const produtoExistente = favoritos.some(fav => fav.id_produto === produto.id_produto);
+    if (produtoExistente) {
+      alert('Este produto já está nos favoritos!');
+      return;
     }
+
+    const novosFavoritos = [...favoritos, produto];
+    localStorage.setItem('favoritos', JSON.stringify(novosFavoritos));
+    setFavoritos(novosFavoritos);
+    alert('Produto adicionado aos favoritos com sucesso!');
+  };
+
+  const produto = {
+    id_produto: '2',
+    nome: 'URBAN NIGHTLIFE BLACK TEE',
+    imagem: CamisetaJapan,
+    valor: 189.90,
+  };
+
+  const handleNavigateToProduto = () => {
+    navigate('/produtocamisetajapan');
   };
 
   return (
     <div className="produto-item">
-      {/* Ícone de favorito */}
-      <div 
-        className="favorito-icon"
-        onClick={handleFavoriteClick}
-      >
-        <img
-          src={isFavorited ? heartFilled : heartEmpty}
-          alt="Ícone de favorito"
-        />
+      <div className="favorito-icon" onClick={() => handleAddToFavorites(produto)}>
+        <img src={coracao} alt="Adicionar aos Favoritos" />
       </div>
-
-      {/* Imagem do produto */}
-      <a href="/produtocamisetajapan">
+      <a onClick={handleNavigateToProduto}>
         <img
-          src={CamisetaJapan}
-          alt="Camiseta Japan"
+          src={produto.imagem}
+          alt={produto.nome}
           className="produto-imagem"
         />
       </a>
-
-      {/* Nome e preço */}
-      <h3>URBAN NIGHTLIFE BLACK TEE</h3>
-      <p><strong>R$ 189,90</strong></p>
-
-      {/* Botão de adicionar ao carrinho */}
+      <h3>{produto.nome}</h3>
+      <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
       <button className="botao" type="submit">
         Adicionar ao Carrinho
       </button>

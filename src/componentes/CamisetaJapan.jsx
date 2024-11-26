@@ -1,53 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/catalogo.css';
-import heartEmpty from '../images/heart-empty.png';
-import heartFilled from '../images/heart-filled.png';
+import { useNavigate } from 'react-router-dom';
+import coracao from '../images/coracao.svg';
 import CamisetaGrito from '../images/CamisetaGrito.png';
 
-function CamisetaJapan({ isFavorito = false }) {
-  const [isFavorited, setIsFavorited] = useState(isFavorito);
+function CamisetaJapan() {
+  const [favoritos, setFavoritos] = useState([]);
+  const navigate = useNavigate();
 
-  const handleFavoriteClick = () => {
-    setIsFavorited(!isFavorited);
+  useEffect(() => {
     const favoritosSalvos = JSON.parse(localStorage.getItem('favoritos')) || [];
-    if (!favoritosSalvos.some(produto => produto.nome === 'SCREAM MBUSS BLACK TEE')) {
-      favoritosSalvos.push({
-        nome: 'SCREAM MBUSS BLACK TEE',
-        imagem: CamisetaGrito,
-        valor: 189.90,
-      });
-      localStorage.setItem('favoritos', JSON.stringify(favoritosSalvos));
-      alert('Produto adicionado aos favoritos com sucesso!');
+    setFavoritos(favoritosSalvos);
+  }, []);
+
+  const handleAddToFavorites = (produto) => {
+    const produtoExistente = favoritos.some(fav => fav.id_produto === produto.id_produto);
+    if (produtoExistente) {
+      alert('Este produto já está nos favoritos!');
+      return;
     }
+
+    const novosFavoritos = [...favoritos, produto];
+    localStorage.setItem('favoritos', JSON.stringify(novosFavoritos));
+    setFavoritos(novosFavoritos);
+    alert('Produto adicionado aos favoritos com sucesso!');
+  };
+
+  const produto = {
+    id_produto: '1',
+    nome: 'SCREAM MBUSS BLACK TEE',
+    imagem: CamisetaGrito,
+    valor: 189.90,
+  };
+
+  const handleNavigateToProduto = () => {
+    navigate('/produtocamisetajapan');
   };
 
   return (
     <div className="produto-item">
-      {/* Ícone de favorito */}
-      <div 
-        className="favorito-icon"
-        onClick={handleFavoriteClick}
-      >
-        <img
-          src={isFavorited ? heartFilled : heartEmpty}
-          alt="Ícone de favorito"
-        />
+      <div className="favorito-icon" onClick={() => handleAddToFavorites(produto)}>
+        <img src={coracao} alt="Adicionar aos Favoritos" />
       </div>
-
-      {/* Imagem do produto */}
-      <a href="/produto">
+      <a onClick={handleNavigateToProduto}>
         <img
-          src={CamisetaGrito}
-          alt="Camiseta Japan"
+          src={produto.imagem}
+          alt={produto.nome}
           className="produto-imagem"
         />
       </a>
-
-      {/* Nome e preço */}
-      <h3>SCREAM MBUSS BLACK TEE</h3>
-      <p><strong>R$ 189,90</strong></p>
-
-      {/* Botão de adicionar ao carrinho */}
+      <h3>{produto.nome}</h3>
+      <p><strong>R$ {produto.valor.toFixed(2)}</strong></p>
       <button className="botao" type="submit">
         Adicionar ao Carrinho
       </button>

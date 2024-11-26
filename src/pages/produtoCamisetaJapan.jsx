@@ -38,11 +38,6 @@ O material escolhido é um algodão de gramatura elevada que proporciona confort
             <option value="M">M</option>
             <option value="G">G</option>
           </select>
-          <div>
-            <button onClick={decrement}>-</button>
-            <span>{count}</span>
-            <button onClick={increment}>+</button>
-          </div>
         </div> 
         <button className="comprar">Comprar</button>
       </div>   
