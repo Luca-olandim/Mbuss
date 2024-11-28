@@ -93,14 +93,15 @@ const Carrinho = () => {
 
   // Verificar login ao continuar para o pagamento
   const handleContinueToPayment = () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn'); // Supondo que você armazene uma chave "isLoggedIn"
+    const isLoggedIn = localStorage.getItem('isLoggedIn'); // Verifica estado de login
     if (isLoggedIn === 'true') {
       navigate('/confirmacaopag'); // Redireciona para a página de confirmação de pagamento
     } else {
       navigate('/login'); // Redireciona para a página de login
     }
   };
-return (
+
+  return (
     <div className="cart-container">
       <header className="header">
         <a href="/">

@@ -16,8 +16,7 @@ function Conta() {
         if (adminStatus === "true") {
             setIsAdmin(true); // Se for admin, define isAdmin como true
         }
-        
-        // Check if the data exists and is not null
+    
         if (correto) {
             try {
                 // Parse the stored data safely
